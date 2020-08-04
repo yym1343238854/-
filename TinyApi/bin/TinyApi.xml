@@ -1,0 +1,1877 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TinyApi</name>
+    </assembly>
+    <members>
+        <member name="M:TinyApi.SwaggerConfig.GetXmlCommentsPath(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.CachingSwaggerProvider.GetControllerDesc">
+            <summary>
+            从API文档中读取控制器描述
+            </summary>
+            <returns>所有控制器描述</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,TinyApi.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:TinyApi.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:TinyApi.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:TinyApi.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:TinyApi.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:TinyApi.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:TinyApi.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,TinyApi.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,TinyApi.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(TinyApi.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:TinyApi.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},TinyApi.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:TinyApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:TinyApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleKey.#ctor(TinyApi.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:TinyApi.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,TinyApi.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:TinyApi.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:TinyApi.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TinyApi.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:TinyApi.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:TinyApi.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:TinyApi.Controllers.MemberController">
+            <summary>
+            用户操作
+            </summary>
+        </member>
+        <member name="F:TinyApi.Controllers.MemberController.WxOpenAppId">
+            <summary>
+            与微信小程序账号后台的AppId设置保持一致，区分大小写。
+            </summary>
+        </member>
+        <member name="F:TinyApi.Controllers.MemberController.WxOpenAppSecret">
+            <summary>
+            与微信小程序账号后台的AppSecret设置保持一致，区分大小写
+            </summary>
+        </member>
+        <member name="M:TinyApi.Controllers.MemberController.Login(TinyApi.Models.Input.InputLoginModel)">
+            <summary>
+            登录（获取基础信息）  
+            需获取unionId时，为下一步获取用户详细信息做准备
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.MemberController.Welcome(TinyApi.Models.Input.InputBaseWithTeamIdModel)">
+            <summary>
+            欢迎 Welcome，已有unionId，快速获取信息  
+            不通过微信服务器，仅在业务数据库中获取
+            如果传入TeamId大于0，则返回指定的TeamId(Guid)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.MemberController.DecodeEncryptedData(TinyApi.Models.Input.InputDecodeEncryptModel)">
+            <summary>
+            解密数据，通过openId等值从微信服务器获取用户详细信息，包含unionId、头像、昵称等
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TinyApi.Controllers.ParentController">
+            <summary>
+            家长相关操作
+            </summary>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.ListMonthBbtRecords(TinyApi.Models.Input.InputStudentMonthTempRecordsModel)">
+            <summary>
+            获取某月的测温记录
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.Register(TinyApi.Models.Input.InputParentRegisterWithStudentIdModel)">
+            <summary>
+            注册（传StudentId时）
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.UploadRegister">
+            <summary>
+            传学生头像注册 UploadRegister
+            格式：在Form的Data项中，存储下面类的实例序列化字符串  
+            {  
+                UnionId:"",  
+                Sign:"",  
+                Name:"",  
+                Mobile:""  
+                IdNo:"",  
+                Relation:""  
+                Teamid:""  
+                StudentName:""  
+                StudentIdNo:""  
+                StudentNo:  
+            }  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.RecordStudentBbt(TinyApi.Models.Input.InputUploadBbt)">
+            <summary>
+            家长记录学生体温 RecordStudentBbt
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.Home(TinyApi.Models.Input.InputStudentIdModel)">
+            <summary>
+            家长首页
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.UploadStudentBbt">
+            <summary>
+            上传体温 UploadBbt
+            格式：在Form的Data项中，存储下面类的实例序列化字符串  
+            {  
+                UnionId:"",  
+                Sign:"",  
+                Name:"",  
+                StudentId:"",  
+                Temperature:"",  
+                Type:""  
+            }  
+            Type：测温类型(1.晨测 2.午测 3.家测 4.临时检查)  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.Checkin(TinyApi.Models.Input.InputParentCheckinModel)">
+            <summary>
+            家长打卡
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.ListMonthCheckinRecords(TinyApi.Models.Input.InputStudentMonthTempRecordsModel)">
+            <summary>
+            家长月打卡情况列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.ListBbtCalendar(TinyApi.Models.Input.InputBbtRecords)">
+            <summary>
+            体温日历
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.ListBbtRecords(TinyApi.Models.Input.InputBbtRecords)">
+            <summary>
+            体温列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.ListTips(TinyApi.Models.Input.InputTeamIdModel)">
+            <summary>
+            校园动态列表
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.EpidemicPreventionInfo(TinyApi.Models.Input.InputTeamIdModel)">
+            <summary>
+            疫情咨询
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.NewsDetail(TinyApi.Models.Input.InputNewsDetail)">
+            <summary>
+            疫情咨询
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.PersonalInfo(TinyApi.Models.Input.InputBaseModel)">
+            <summary>
+            个人中心
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.ParentController.MemberManagement(TinyApi.Models.Input.InputStudentIdModel)">
+            <summary>
+            成员管理
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TinyApi.Controllers.TeacherController">
+            <summary>
+            老师操作
+            </summary>
+        </member>
+        <member name="M:TinyApi.Controllers.TeacherController.RecordStudentBbt(TinyApi.Models.Input.InputTeacherRecordStudentBbtModel)">
+            <summary>
+            记录学生体温
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TinyApi.Controllers.TeamController">
+            <summary>
+            班级操作
+            </summary>
+        </member>
+        <member name="M:TinyApi.Controllers.TeamController.ListStudents(TinyApi.Models.Input.InputTeamIdModel)">
+            <summary>
+            列出班级已登记的学生
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.TeamController.Load(TinyApi.Models.Input.InputTeamIdWidthStudentIdModel)">
+             <summary>
+             加载指定班级基本信息  
+            
+             如果有学生编号传入，则同时返回指定学生信息
+             </summary>
+             <param name="model"></param>
+             <returns></returns>
+        </member>
+        <member name="M:TinyApi.Controllers.TeamController.LoadTeamId(TinyApi.Models.Input.InputBaseWithTeamIdModel)">
+            <summary>
+            根据整型Id或者Guid型TeamId
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TinyApi.Controllers.TestController">
+            <summary>
+            测试操作
+            </summary>
+        </member>
+        <member name="M:TinyApi.Core.Helper.RandomString(System.Int32)">
+            <summary>
+            随机字符串
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.Base64Encode(System.String)">
+            <summary>
+            Base64编码
+            </summary>
+            <param name="plainText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.Base64Decode(System.String)">
+            <summary>
+            Base64解码
+            </summary>
+            <param name="base64EncodedData">Base64字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.CreateDirectory(System.String)">
+            <summary>
+            创建文件夹
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:TinyApi.Core.Helper.RemoveHtmlTags(System.String)">
+            <summary>
+            Remove HTML from string with Regex.
+            </summary>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FileMove(System.String,System.String,System.String)">
+            <summary>
+            文件迁移
+            </summary>
+            <param name="path">目录地址</param>
+            <param name="localFileName">老地址</param>
+            <param name="newFileName">新地址</param>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FixImagePath(System.String)">
+            <summary>
+            图片地址拼接
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.GetGarbageCanBg(System.Guid,System.Int32)">
+            <summary>
+            获取挑战时垃圾桶（对应城市的）照片
+            </summary>
+            <param name="cityId"></param>
+            <param name="orderNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FixUnionId(System.String)">
+            <summary>
+            修复unionId
+            </summary>
+            <param name="unionId"></param>
+        </member>
+        <member name="M:TinyApi.Core.Helper.DownloadImageFromUrl(System.String,System.String,System.String@)">
+            <summary>
+            下载图片
+            </summary>
+            <param name="imageUrl"></param>
+            <param name="savePath"></param>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FormatContent(System.String,System.Boolean)">
+            <summary>
+            格式化内容
+            </summary>
+            <param name="source"></param>
+            <param name="isSummary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.BeautyTimeSpan(System.DateTime)">
+            <summary>
+            美化时间段
+            </summary>
+            <param name="time">时间</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FormatSeconds(System.Int32)">
+            <summary>
+            格式化秒到时间
+            </summary>
+            <param name="seconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.GetWeekName(System.DateTime)">
+            <summary>
+            获取星期名称
+            </summary>
+            <param name="day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FormatContentToHtml(System.String)">
+            <summary>
+            格式化内容
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.FormatMinutes(System.Int32)">
+            <summary>
+            将分钟折算成日小时分钟格式
+            </summary>
+            <param name="minutes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.Helper.GenerateThumbnail(System.String,System.String,System.String,System.Int32,System.String@,System.Int32@,System.Int32@)">
+            <summary> 
+             生成缩略图 静态方法    
+            </summary> 
+            <param name="pathImageFrom"> 源图的路径(含文件名及扩展名) </param> 
+            <param name="pathImageTo"> 生成的缩略图所保存的路径(含文件名及扩展名) 
+                                       注意：扩展名一定要与生成的缩略图格式相对应 </param>
+            <param name="pathThumb">缩略图</param>
+            <param name="maxLength"> 欲生成的缩略图 “画布” 的宽度(像素值) </param> 
+            <param name="error"></param> 
+        </member>
+        <member name="T:TinyApi.Core.JsonSplit">
+            <summary>
+            分隔Json字符串为字典集合。
+            </summary>
+        </member>
+        <member name="M:TinyApi.Core.JsonSplit.IsJsonStart(System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.JsonSplit.IsJson(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.JsonSplit.IsJson(System.String,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="json"></param>
+            <param name="errIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TinyApi.Core.JsonSplit.GetValueLength(System.String,System.Boolean,System.Int32@)">
+            <summary>
+            获取值的长度（当Json值嵌套以"{"或"["开头时）
+            </summary>
+        </member>
+        <member name="T:TinyApi.Core.JsonSplit.CharState">
+            <summary>
+            字符状态
+            </summary>
+        </member>
+        <member name="F:TinyApi.Core.JsonSplit.CharState.arrayStart">
+            <summary>
+            数组开始【仅第一开头才算】，值嵌套的以【childrenStart】来标识。
+            </summary>
+        </member>
+        <member name="F:TinyApi.Core.JsonSplit.CharState.state">
+            <summary>
+            【0 初始状态，或 遇到“,”逗号】；【1 遇到“：”冒号】
+            </summary>
+        </member>
+        <member name="F:TinyApi.Core.JsonSplit.CharState.keyStart">
+            <summary>
+            【-1 取值结束】【0 未开始】【1 无引号开始】【2 单引号开始】【3 双引号开始】
+            </summary>
+        </member>
+        <member name="F:TinyApi.Core.JsonSplit.CharState.valueStart">
+            <summary>
+            【-1 取值结束】【0 未开始】【1 无引号开始】【2 单引号开始】【3 双引号开始】
+            </summary>
+        </member>
+        <member name="M:TinyApi.Core.JsonSplit.SetCharState(System.Char,TinyApi.Core.JsonSplit.CharState@)">
+            <summary>
+            设置字符状态(返回true则为关键词，返回false则当为普通字符处理）
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.ImageFileModel">
+            <summary>
+            图片文件信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.Url">
+            <summary>
+            url
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.OldName">
+            <summary>
+            旧名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.NewName">
+            <summary>
+            新名称
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.ImageFileModel.FileExt">
+            <summary>
+            文件后缀
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputBaseModel">
+            <summary>
+            输入基础类
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputBaseModel.UnionId">
+            <summary>
+            联合编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputBaseModel.Sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputDecodeEncryptModel">
+            <summary>
+            解压模型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputDecodeEncryptModel.EncryptedData">
+            <summary>
+            加密数据
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputDecodeEncryptModel.Iv">
+            <summary>
+            向量
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputLoginModel">
+            <summary>
+            登录输入模型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputLoginModel.JsCode">
+            <summary>
+            JS码
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputNewsDetail">
+            <summary>
+            通知详情
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputNewsDetail.NewsId">
+            <summary>
+            通知编号
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputParentCheckinModel">
+            <summary>
+            家长打卡模型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentCheckinModel.ColorStatus">
+            <summary>
+            健康码 1 - 绿色 2 橙色  3 红色
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputStudentIdModel">
+            <summary>
+            家长首页
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputStudentIdModel.StudentId">
+            <summary>
+            学生唯一编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputStudentIdModel.TeamId">
+            <summary>
+            班级唯一编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.TeamId">
+            <summary>
+            班级编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.Name">
+            <summary>
+            家长姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.IdNo">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.Relation">
+            <summary>
+            与孩子关系
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.StudentName">
+            <summary>
+            学生姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.StudentNo">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterModel.StudentIdNo">
+            <summary>
+            学生身份证号
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel">
+            <summary>
+            家长注册输入模型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.TeamId">
+            <summary>
+            班级编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.Name">
+            <summary>
+            家长姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.IdNo">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputParentRegisterWithStudentIdModel.Relation">
+            <summary>
+            与孩子关系
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputStudentMonthTempRecordsModel">
+            <summary>
+            学生某月测温记录
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputStudentMonthTempRecordsModel.Year">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputStudentMonthTempRecordsModel.Month">
+            <summary>
+            月
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputStudentMonthTempRecordsModel.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputTeacherBaseModel">
+            <summary>
+            教职工输入基础类
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputTeacherBaseModel.TeamId">
+            <summary>
+            班级编号
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputTeacherRecordStudentBbtModel">
+            <summary>
+            教室记录学生体温模型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputTeacherRecordStudentBbtModel.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputTeacherRecordStudentBbtModel.Temperature">
+            <summary>
+            摄氏度体温
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputTeacherRecordStudentBbtModel.Type">
+            <summary>
+            类型 1 晨测 2 午测 3 家测 4 抽测
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputUploadBbt">
+            <summary>
+            上传体温
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputUploadBbt.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputUploadBbt.Temperature">
+            <summary>
+            体温
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputUploadBbt.Type">
+            <summary>
+            测温类型(1.晨测 2.午测 3.家测 4.临时检查)
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Input.InputBbtRecords">
+            <summary>
+            学生体温信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputBbtRecords.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Input.InputBbtRecords.SpecDay">
+            <summary>
+            指定月份/日期
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataBbtCalendar">
+            <summary>
+            测温日历
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataBbtCalendar.SpecDays">
+            <summary>
+            测温日期列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.SpecDay">
+            <summary>
+            测温信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.SpecDay.DateStr">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.SpecDay.Status">
+            <summary>
+            体温是否正常（true:正常 false.异常）
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.SpecDay.MeasureNum">
+            <summary>
+            测温次数
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataBbtRecords">
+            <summary>
+            体温记录列表
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataBbtRecords.BbtRecords">
+            <summary>
+            体温记录列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataEpidemicPreventionInfo">
+            <summary>
+            防疫资讯信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataEpidemicPreventionInfo.StudentNum">
+            <summary>
+            学生数量
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataEpidemicPreventionInfo.TeacherNum">
+            <summary>
+            教职工数量
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataEpidemicPreventionInfo.News">
+            <summary>
+            通知列表
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataEpidemicPreventionInfo.Documents">
+            <summary>
+            指南列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataNews">
+            <summary>
+            通知
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNews.NewsId">
+            <summary>
+            通知编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNews.Title">
+            <summary>
+            通知标题
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNews.PublishTimeStr">
+            <summary>
+            通知发布时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNews.Hits">
+            <summary>
+            浏览人次
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataDocument">
+            <summary>
+            防疫指南
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataDocument.DocumentId">
+            <summary>
+            指南编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataDocument.Title">
+            <summary>
+            指南标题
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataDocument.PublishTimeStr">
+            <summary>
+            指南发布时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataDocument.Hits">
+            <summary>
+            下载人次
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataDocument.DocumentUrl">
+            <summary>
+            指南地址
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataFamilyMember">
+            <summary>
+            家庭成员
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataFamilyMember.Team">
+            <summary>
+            班级学生具体信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataFamilyMember.TodayString">
+            <summary>
+            今日信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataFamilyMember.FamilyMembers">
+            <summary>
+            家庭成员列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.FamilyMember">
+            <summary>
+            家庭成员
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMember.ParentId">
+            <summary>
+            家长编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMember.ParentName">
+            <summary>
+            家长姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMember.HasBindWeiXin">
+            <summary>
+            是否绑定微信
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMember.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMember.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataLoginInfo">
+            <summary>
+            登录接口返回结果
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataLoginInfo.UnionId">
+            <summary>
+            唯一编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataLoginInfo.OpenId">
+            <summary>
+            OpenId
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataLoginInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataLoginInfo.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataLoginInfo.QrcodeUrl">
+            <summary>
+            个人二维码
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataNewsDetail">
+            <summary>
+            通知详情
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsDetail.Content">
+            <summary>
+            通知内容
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsDetail.AttachMents">
+            <summary>
+            附件列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataNewsAttachMent">
+            <summary>
+            附件
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsAttachMent.AttachMentId">
+            <summary>
+            附件编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsAttachMent.Url">
+            <summary>
+            附件地址
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsAttachMent.FileSize">
+            <summary>
+            附件大小
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsAttachMent.FileName">
+            <summary>
+            附件文件名称
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataNewsAttachMent.Ext">
+            <summary>
+            文件后缀
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataParentHome">
+            <summary>
+            家长主页信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.Team">
+            <summary>
+            班级学生具体信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.TodayString">
+            <summary>
+            今日信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.HolidayStatus">
+            <summary>
+            上课状态(0.上课 1.放假 3.停课)
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.HasFamilyMeasureBbt">
+            <summary>
+            是否测量过体温
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.NeedFamilyTest">
+            <summary>
+            是否需要家庭测温(true:need false:do not need)
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.UploadBbtPhotoType">
+            <summary>
+            上传体温照片类型 (1.必须上传照片 2.可选上传 3.不可上传)
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.FamilyMembers">
+            <summary>
+            家庭成员打卡状况列表
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.FamilyBbt">
+            <summary>
+            家庭测温记录
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.FirstSchoolBbt">
+            <summary>
+            学校晨测
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.SecondSchoolBbt">
+            <summary>
+            学校午测
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.Tips">
+            <summary>
+            最新动态
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.CheckinSchedule">
+            <summary>
+            到校时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.CheckoutSchedule">
+            <summary>
+            离校时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentHome.TodoTasks">
+            <summary>
+            待完成任务
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.FamilyMemberCheckin">
+            <summary>
+            家庭成员打卡状况
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMemberCheckin.ParentId">
+            <summary>
+            家长编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMemberCheckin.AvatarUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMemberCheckin.HasCheckin">
+            <summary>
+            是否打卡
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMemberCheckin.ColorStatus">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.FamilyMemberCheckin.CssClass">
+            <summary>
+            CSS类
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.BbtRecord">
+            <summary>
+            体温记录
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.BbtRecord.Temperature">
+            <summary>
+            温度
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.BbtRecord.Status">
+            <summary>
+            体温是否正常
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.BbtRecord.MeasureTimeStr">
+            <summary>
+            测温时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.BbtRecordDetail.Type">
+            <summary>
+            测温类型 1 晨测 2 午测 3 家测 4 抽测
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.Tip">
+            <summary>
+            动态
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.Tip.TipsId">
+            <summary>
+            动态时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.Tip.TimeStr">
+            <summary>
+            动态时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.Tip.Content">
+            <summary>
+            动态内容
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.Tip.FontColor">
+            <summary>
+            动态文字显示颜色
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DaySchedule">
+            <summary>
+            计划
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DaySchedule.Type">
+            <summary>
+            类型(1.上学 2.放学)
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DaySchedule.StartTimeStr">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DaySchedule.EndTimeStr">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataParentMonthCheckinRecords">
+            <summary>
+            家长打卡月数据
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentDayCheckinRecord.Day">
+            <summary>
+            日
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentDayCheckinRecord.Hhmm">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentDayCheckinRecord.ColorStatus">
+            <summary>
+            健康码颜色
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentDayCheckinRecord.ColorCss">
+            <summary>
+            颜色css类名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentDayCheckinRecord.PhotoUrl">
+            <summary>
+            附件图片（如果有）
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataPersonalInfo">
+            <summary>
+            我的信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataPersonalInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataPersonalInfo.Mobile">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataPersonalInfo.HeadImage">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataPersonalInfo.Teachers">
+            <summary>
+            身份切换-教师身份
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataPersonalInfo.Parents">
+            <summary>
+            身份切换-家长身份
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataTeacherIdentity">
+            <summary>
+            教师身份
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeacherIdentity.TeamName">
+            <summary>
+            班级名称
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeacherIdentity.AvatarUrl">
+            <summary>
+            照片
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataParentIdentity">
+            <summary>
+            家长身份
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentIdentity.StudentName">
+            <summary>
+            学生姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataParentIdentity.AvatarUrl">
+            <summary>
+            学生照片
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataSchoolTips">
+            <summary>
+            校园动态
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataSchoolTips.TabCount">
+            <summary>
+            标签页个数
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataSchoolTips.RoomTypes">
+            <summary>
+            场所类型列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.RoomTab">
+            <summary>
+            场所类型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTab.TabId">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTab.TabName">
+            <summary>
+            类型名称（tab标题）
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTab.Rooms">
+            <summary>
+            场所列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.RoomTips">
+            <summary>
+            场所的动态列表
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTips.RoomId">
+            <summary>
+            场所编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTips.Name">
+            <summary>
+            场所名称
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.RoomTips.Tips">
+            <summary>
+            动态列表
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataStudentMonthTempRecords">
+            <summary>
+            月数据
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentMonthTempRecords.Days">
+            <summary>
+            日数据数组
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataStudentDayRecord">
+            <summary>
+            日数据
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentDayRecord.Day">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentDayRecord.FamilyTempRecord">
+            <summary>
+            家庭测温颜色
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentDayRecord.FirstTempRecord">
+            <summary>
+            第一次学校测温颜色
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentDayRecord.SecondTempRecord">
+            <summary>
+            第二次学校测温颜色
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataStudentDayRecord.Records">
+            <summary>
+            当日记录
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataTempRecord">
+            <summary>
+            测温记录
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataTeamStudents">
+            <summary>
+            班级所有学生
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeamStudents.Students">
+            <summary>
+            班级已有学生
+            </summary>
+        </member>
+        <member name="T:TinyApi.Models.Result.DataTeamStudent">
+            <summary>
+            班级学生信息
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeamStudent.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeamStudent.StudentId">
+            <summary>
+            学生编号
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeamStudent.AvatarUrl">
+            <summary>
+            头像链接
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.DataTeamStudent.IsMyChild">
+            <summary>
+            是我的孩子
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult.Success">
+            <summary>
+            成功失败
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult.ErrorMessage">
+            <summary>
+            错误提示
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult`1.Data">
+            <summary>
+            带数据的返回
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult`1.Success">
+            <summary>
+            成功失败
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult`1.ErrorMessage">
+            <summary>
+            错误提示
+            </summary>
+        </member>
+        <member name="P:TinyApi.Models.Result.InvokeResult`1.ErrorNumber">
+            <summary>
+            错误代码
+            </summary>
+        </member>
+        <member name="T:TinyApi.SiteConfig">
+            <summary>
+            网站设定
+            </summary>
+        </member>
+        <member name="P:TinyApi.SiteConfig.DefaultUnionId">
+            <summary>
+            默认用户
+            </summary>
+        </member>
+        <member name="P:TinyApi.SiteConfig.WxOpenAppId">
+            <summary>
+            微信Id
+            </summary>
+        </member>
+        <member name="P:TinyApi.SiteConfig.WxOpenAppSecret">
+            <summary>
+            微信秘钥
+            </summary>
+        </member>
+        <member name="P:TinyApi.SiteConfig.BaseImageUrl">
+            <summary>
+            图片基地址
+            </summary>
+        </member>
+        <member name="P:TinyApi.SiteConfig.MaxNormalTemperature">
+            <summary>
+            最高正常体温
+            </summary>
+        </member>
+    </members>
+</doc>

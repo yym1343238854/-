@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.CO2NET.Cache.Redis</name>
+    </assembly>
+    <members>
+        <member name="T:Senparc.CO2NET.Cache.Redis.BaseRedisObjectCacheStrategy">
+            <summary>
+            所有Redis基础缓存策略的基类
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.BaseRedisObjectCacheStrategy.Finalize">
+            <summary>
+            Redis 缓存策略析构函数，用于 _client 资源回收
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.BaseRedisObjectCacheStrategy.GetServer">
+            <summary>
+            获取 Server 对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy">
+            <summary>
+            Redis的Object类型容器缓存（Key为String类型）
+            </summary>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.HashKeyAndField">
+            <summary>
+            Hash储存的Key和Field集合
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.#ctor">
+            <summary>
+            Redis 缓存策略
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.GetHashKeyAndField(System.String,System.Boolean)">
+            <summary>
+            获取Hash储存的Key和Field
+            </summary>
+            <param name="key"></param>
+            <param name="isFullKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.CheckExisted(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="isFullKey">是否已经是完整的Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.GetAll">
+            <summary>
+            注意：此方法获取的object为直接储存在缓存中，序列化之后的Value（最多 99999 条）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.GetCount">
+            <summary>
+            获取所有缓存项计数（最多 99999 条）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.InsertToCache(System.String,System.Object,System.Nullable{System.TimeSpan})">
+            <summary>
+            插入对象。注意：过期时间对 HashSet 无效！
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.Set(System.String,System.Object,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            设置对象。注意：过期时间对 HashSet 无效！
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="isFullKey"></param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.Update(System.String,System.Object,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            更新对象。注意：过期时间对 HashSet 无效！
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="isFullKey"></param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.CheckExistedAsync(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="isFullKey">是否已经是完整的Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.GetAllAsync">
+            <summary>
+            注意：此方法获取的object为直接储存在缓存中，序列化之后的Value（最多 99999 条）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.SetAsync(System.String,System.Object,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            设置对象。注意：过期时间对 HashSet 无效！
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="isFullKey"></param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.UpdateAsync(System.String,System.Object,System.Nullable{System.TimeSpan},System.Boolean)">
+            <summary>
+            更新对象。注意：过期时间对 HashSet 无效！
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="isFullKey"></param>
+            <param name="expiry"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.HashGetAll(System.String)">
+            <summary>
+            _cache.HashGetAll()
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisHashSetObjectCacheStrategy.HashGetAllAsync(System.String)">
+            <summary>
+            _cache.HashGetAll()
+            </summary>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy">
+            <summary>
+            Redis的Object类型容器缓存（Key为String类型），Key-Value 类型储存
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.#ctor">
+            <summary>
+            Redis 缓存策略
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.CheckExisted(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="isFullKey">是否已经是完整的Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.GetAll">
+            <summary>
+            注意：此方法获取的object为直接储存在缓存中，序列化之后的Value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.CheckExistedAsync(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="isFullKey">是否已经是完整的Key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.GetAllAsync">
+            <summary>
+            注意：此方法获取的object为直接储存在缓存中，序列化之后的Value（最多 99999 条）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.GetAllByPrefix``1(System.String)">
+            <summary>
+            根据 key 的前缀获取对象列表（最多 99999 条）
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisObjectCacheStrategy.GetAllByPrefixAsync``1(System.String)">
+            <summary>
+            【异步方法】根据 key 的前缀获取对象列表（最多 99999 条）
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisCacheLock.CreateAndLock(Senparc.CO2NET.Cache.IBaseCacheStrategy,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.TimeSpan})">
+            <summary>
+            创建 RedisCacheLock 实例，并立即尝试获得锁
+            </summary>
+            <param name="strategy">BaseRedisObjectCacheStrategy</param>
+            <param name="resourceName"></param>
+            <param name="key"></param>
+            <param name="retryCount"></param>
+            <param name="retryDelay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisCacheLock.CreateAndLockAsync(Senparc.CO2NET.Cache.IBaseCacheStrategy,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.TimeSpan})">
+            <summary>
+            【异步方法】创建 RedisCacheLock 实例，并立即尝试获得锁
+            </summary>
+            <param name="strategy">BaseRedisObjectCacheStrategy</param>
+            <param name="resourceName"></param>
+            <param name="key"></param>
+            <param name="retryCount"></param>
+            <param name="retryDelay"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.Register">
+            <summary>
+            Redis 注册
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.Register.RegisterCacheRedis(Senparc.CO2NET.RegisterServices.IRegisterService,System.String,System.Func{System.String,Senparc.CO2NET.Cache.IBaseObjectCacheStrategy})">
+            <summary>
+            注册 Redis 缓存信息
+            </summary>
+            <param name="registerService">RegisterService</param>
+            <param name="redisConfigurationString">Redis的连接字符串</param>
+            <param name="redisObjectCacheStrategyInstance">缓存策略的委托，第一个参数为 redisConfigurationString</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.Register.SetConfigurationOption(System.String)">
+            <summary>
+            设置连接字符串（不立即启用）
+            </summary>
+            <param name="redisConfigurationString"></param>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.Register.UseKeyValueRedisNow">
+            <summary>
+            立即使用键值对方式储存的 Redis（推荐）
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.Register.UseHashRedisNow">
+            <summary>
+            立即使用 HashSet 方式储存的 Redis 缓存策略
+            </summary>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.RedisManager">
+            <summary>
+            Redis 链接管理
+            </summary>
+        </member>
+        <member name="P:Senparc.CO2NET.Cache.Redis.RedisManager._redis">
+            <summary>
+            _redis(ConnectionMultiplexer)单例
+            </summary>
+        </member>
+        <member name="P:Senparc.CO2NET.Cache.Redis.RedisManager.ConfigurationOption">
+            <summary>
+            链接设置字符串
+            </summary>
+        </member>
+        <member name="P:Senparc.CO2NET.Cache.Redis.RedisManager.Manager">
+            <summary>
+            ConnectionMultiplexer
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisManager.GetDefaultConnectionString">
+            <summary>
+            默认连接字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.RedisUtils">
+            <summary>
+            RedisUtils
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisUtils.ToHashEntries(System.Object)">
+            <summary>
+            Serialize in Redis format
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.RedisUtils.ConvertFromRedis``1(StackExchange.Redis.HashEntry[])">
+            <summary>
+            Deserialize from Redis format
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="hashEntries"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Senparc.CO2NET.Cache.Redis.StackExchangeRedisExtensions">
+            <summary>
+             StackExchangeRedis 扩展
+            </summary>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.StackExchangeRedisExtensions.Serialize(System.Object)">
+            <summary>
+            序列化对象
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Senparc.CO2NET.Cache.Redis.StackExchangeRedisExtensions.Deserialize``1(System.Byte[])">
+            <summary>
+            反序列化对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

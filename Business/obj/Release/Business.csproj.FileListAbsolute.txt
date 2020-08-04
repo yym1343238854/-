@@ -1,0 +1,15 @@
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\Business.dll.config
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\Business.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\Business.pdb
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\Codans.Helper.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\EntityFramework.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\EntityFramework.SqlServer.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\EntityFramework.xml
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\EntityFramework.SqlServer.xml
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\obj\Release\Business.csprojAssemblyReference.cache
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\obj\Release\Business.csproj.CoreCompileInputs.cache
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\obj\Release\Business.csproj.CopyComplete
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\obj\Release\Business.dll
+F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\obj\Release\Business.pdb

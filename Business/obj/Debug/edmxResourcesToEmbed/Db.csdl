@@ -1,0 +1,2358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HealthySchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="HealthySchoolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AbsenceRecord" EntityType="HealthySchoolModel.AbsenceRecord" />
+    <EntitySet Name="AirRecord" EntityType="HealthySchoolModel.AirRecord" />
+    <EntitySet Name="Arrangement" EntityType="HealthySchoolModel.Arrangement" />
+    <EntitySet Name="ArrangementAsset" EntityType="HealthySchoolModel.ArrangementAsset" />
+    <EntitySet Name="ArrangementDetail" EntityType="HealthySchoolModel.ArrangementDetail" />
+    <EntitySet Name="Attachment" EntityType="HealthySchoolModel.Attachment" />
+    <EntitySet Name="City" EntityType="HealthySchoolModel.City" />
+    <EntitySet Name="ClaimRecord" EntityType="HealthySchoolModel.ClaimRecord" />
+    <EntitySet Name="County" EntityType="HealthySchoolModel.County" />
+    <EntitySet Name="DataDictionary" EntityType="HealthySchoolModel.DataDictionary" />
+    <EntitySet Name="DisinfectRecord" EntityType="HealthySchoolModel.DisinfectRecord" />
+    <EntitySet Name="Document" EntityType="HealthySchoolModel.Document" />
+    <EntitySet Name="EnterRecord" EntityType="HealthySchoolModel.EnterRecord" />
+    <EntitySet Name="ExceptionCase" EntityType="HealthySchoolModel.ExceptionCase" />
+    <EntitySet Name="ExceptionCaseHistory" EntityType="HealthySchoolModel.ExceptionCaseHistory" />
+    <EntitySet Name="Holiday" EntityType="HealthySchoolModel.Holiday" />
+    <EntitySet Name="Mng_UserRole" EntityType="HealthySchoolModel.Mng_UserRole" />
+    <EntitySet Name="Module" EntityType="HealthySchoolModel.Module" />
+    <EntitySet Name="ModuleItem" EntityType="HealthySchoolModel.ModuleItem" />
+    <EntitySet Name="ModuleItemPrivilege" EntityType="HealthySchoolModel.ModuleItemPrivilege" />
+    <EntitySet Name="ModuleRolePermission" EntityType="HealthySchoolModel.ModuleRolePermission" />
+    <EntitySet Name="News" EntityType="HealthySchoolModel.News" />
+    <EntitySet Name="NewsAttachment" EntityType="HealthySchoolModel.NewsAttachment" />
+    <EntitySet Name="Notification" EntityType="HealthySchoolModel.Notification" />
+    <EntitySet Name="Parent" EntityType="HealthySchoolModel.Parent" />
+    <EntitySet Name="ParentCheckin" EntityType="HealthySchoolModel.ParentCheckin" />
+    <EntitySet Name="Privilege" EntityType="HealthySchoolModel.Privilege" />
+    <EntitySet Name="Province" EntityType="HealthySchoolModel.Province" />
+    <EntitySet Name="Role" EntityType="HealthySchoolModel.Role" />
+    <EntitySet Name="RolePermission" EntityType="HealthySchoolModel.RolePermission" />
+    <EntitySet Name="Room" EntityType="HealthySchoolModel.Room" />
+    <EntitySet Name="RoomPlan" EntityType="HealthySchoolModel.RoomPlan" />
+    <EntitySet Name="RoomTeacher" EntityType="HealthySchoolModel.RoomTeacher" />
+    <EntitySet Name="School" EntityType="HealthySchoolModel.School" />
+    <EntitySet Name="StockIn" EntityType="HealthySchoolModel.StockIn" />
+    <EntitySet Name="Student" EntityType="HealthySchoolModel.Student" />
+    <EntitySet Name="StudentBbtRecord" EntityType="HealthySchoolModel.StudentBbtRecord" />
+    <EntitySet Name="StudentParent" EntityType="HealthySchoolModel.StudentParent" />
+    <EntitySet Name="Teacher" EntityType="HealthySchoolModel.Teacher" />
+    <EntitySet Name="TeacherBbtRecord" EntityType="HealthySchoolModel.TeacherBbtRecord" />
+    <EntitySet Name="TeacherLog" EntityType="HealthySchoolModel.TeacherLog" />
+    <EntitySet Name="TeacherRole" EntityType="HealthySchoolModel.TeacherRole" />
+    <EntitySet Name="TeacherTag" EntityType="HealthySchoolModel.TeacherTag" />
+    <EntitySet Name="TeamClassroom" EntityType="HealthySchoolModel.TeamClassroom" />
+    <EntitySet Name="TeamNews" EntityType="HealthySchoolModel.TeamNews" />
+    <EntitySet Name="TeamSchedule" EntityType="HealthySchoolModel.TeamSchedule" />
+    <EntitySet Name="TeamStudent" EntityType="HealthySchoolModel.TeamStudent" />
+    <EntitySet Name="TeamTeacher" EntityType="HealthySchoolModel.TeamTeacher" />
+    <EntitySet Name="Tips" EntityType="HealthySchoolModel.Tips" />
+    <EntitySet Name="VerifyCode" EntityType="HealthySchoolModel.VerifyCode" />
+    <EntitySet Name="Visitor" EntityType="HealthySchoolModel.Visitor" />
+    <EntitySet Name="WeiXinUser" EntityType="HealthySchoolModel.WeiXinUser" />
+    <EntitySet Name="Asset" EntityType="HealthySchoolModel.Asset" />
+    <AssociationSet Name="RefAbsenceRecord502" Association="HealthySchoolModel.RefAbsenceRecord502">
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefDataDictionary1312" Association="HealthySchoolModel.RefDataDictionary1312">
+      <End Role="DataDictionary" EntitySet="DataDictionary" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent642" Association="HealthySchoolModel.RefStudent642">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher652" Association="HealthySchoolModel.RefTeacher652">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefAirRecord372" Association="HealthySchoolModel.RefAirRecord372">
+      <End Role="AirRecord" EntitySet="AirRecord" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom302" Association="HealthySchoolModel.RefRoom302">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="AirRecord" EntitySet="AirRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher322" Association="HealthySchoolModel.RefTeacher322">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="AirRecord" EntitySet="AirRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1052" Association="HealthySchoolModel.RefArrangement1052">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="ArrangementDetail" EntitySet="ArrangementDetail" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1062" Association="HealthySchoolModel.RefArrangement1062">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="ArrangementAsset" EntitySet="ArrangementAsset" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1262" Association="HealthySchoolModel.RefArrangement1262">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="RoomPlan" EntitySet="RoomPlan" />
+    </AssociationSet>
+    <AssociationSet Name="RefDisinfectRecord382" Association="HealthySchoolModel.RefDisinfectRecord382">
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefCity562" Association="HealthySchoolModel.RefCity562">
+      <End Role="City" EntitySet="City" />
+      <End Role="County" EntitySet="County" />
+    </AssociationSet>
+    <AssociationSet Name="RefProvince802" Association="HealthySchoolModel.RefProvince802">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1302" Association="HealthySchoolModel.RefTeacher1302">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ClaimRecord" EntitySet="ClaimRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher542" Association="HealthySchoolModel.RefTeacher542">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ClaimRecord" EntitySet="ClaimRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefCounty572" Association="HealthySchoolModel.RefCounty572">
+      <End Role="County" EntitySet="County" />
+      <End Role="School" EntitySet="School" />
+    </AssociationSet>
+    <AssociationSet Name="RefDataDictionary1282" Association="HealthySchoolModel.RefDataDictionary1282">
+      <End Role="DataDictionary" EntitySet="DataDictionary" />
+      <End Role="TeacherTag" EntitySet="TeacherTag" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom292" Association="HealthySchoolModel.RefRoom292">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher832" Association="HealthySchoolModel.RefTeacher832">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1132" Association="HealthySchoolModel.RefTeacher1132">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent522" Association="HealthySchoolModel.RefStudent522">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="EnterRecord" EntitySet="EnterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher512" Association="HealthySchoolModel.RefTeacher512">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="EnterRecord" EntitySet="EnterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefExceptionCase1022" Association="HealthySchoolModel.RefExceptionCase1022">
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefExceptionCase482" Association="HealthySchoolModel.RefExceptionCase482">
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+      <End Role="ExceptionCaseHistory" EntitySet="ExceptionCaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent682" Association="HealthySchoolModel.RefParent682">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefParentCheckin1212" Association="HealthySchoolModel.RefParentCheckin1212">
+      <End Role="ParentCheckin" EntitySet="ParentCheckin" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent672" Association="HealthySchoolModel.RefStudent672">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudentBbtRecord1192" Association="HealthySchoolModel.RefStudentBbtRecord1192">
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher662" Association="HealthySchoolModel.RefTeacher662">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacherBbtRecord1202" Association="HealthySchoolModel.RefTeacherBbtRecord1202">
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher822" Association="HealthySchoolModel.RefTeacher822">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ExceptionCaseHistory" EntitySet="ExceptionCaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool762" Association="HealthySchoolModel.RefSchool762">
+      <End Role="School" EntitySet="School" />
+      <End Role="Holiday" EntitySet="Holiday" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole882" Association="HealthySchoolModel.RefRole882">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Mng_UserRole" EntitySet="Mng_UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher942" Association="HealthySchoolModel.RefTeacher942">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Mng_UserRole" EntitySet="Mng_UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefModule862" Association="HealthySchoolModel.RefModule862">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+    </AssociationSet>
+    <AssociationSet Name="RefModule922" Association="HealthySchoolModel.RefModule922">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="ModuleRolePermission" EntitySet="ModuleRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem842" Association="HealthySchoolModel.RefModuleItem842">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="RolePermission" EntitySet="RolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem852" Association="HealthySchoolModel.RefModuleItem852">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="ModuleItemPrivilege" EntitySet="ModuleItemPrivilege" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem872" Association="HealthySchoolModel.RefModuleItem872">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="ModuleItem1" EntitySet="ModuleItem" />
+    </AssociationSet>
+    <AssociationSet Name="RefPrivilege932" Association="HealthySchoolModel.RefPrivilege932">
+      <End Role="Privilege" EntitySet="Privilege" />
+      <End Role="ModuleItemPrivilege" EntitySet="ModuleItemPrivilege" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole902" Association="HealthySchoolModel.RefRole902">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="ModuleRolePermission" EntitySet="ModuleRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefNews1142" Association="HealthySchoolModel.RefNews1142">
+      <End Role="News" EntitySet="News" />
+      <End Role="TeamNews" EntitySet="TeamNews" />
+    </AssociationSet>
+    <AssociationSet Name="RefNews1222" Association="HealthySchoolModel.RefNews1222">
+      <End Role="News" EntitySet="News" />
+      <End Role="NewsAttachment" EntitySet="NewsAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1122" Association="HealthySchoolModel.RefTeacher1122">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1002" Association="HealthySchoolModel.RefTeacher1002">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1012" Association="HealthySchoolModel.RefTeacher1012">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent182" Association="HealthySchoolModel.RefParent182">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="StudentParent" EntitySet="StudentParent" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent242" Association="HealthySchoolModel.RefParent242">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="ParentCheckin" EntitySet="ParentCheckin" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent342" Association="HealthySchoolModel.RefParent342">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser792" Association="HealthySchoolModel.RefWeiXinUser792">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="Parent" EntitySet="Parent" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole912" Association="HealthySchoolModel.RefRole912">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RolePermission" EntitySet="RolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole962" Association="HealthySchoolModel.RefRole962">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="TeacherRole" EntitySet="TeacherRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom1102" Association="HealthySchoolModel.RefRoom1102">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Tips" EntitySet="Tips" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom1252" Association="HealthySchoolModel.RefRoom1252">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="RoomPlan" EntitySet="RoomPlan" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom152" Association="HealthySchoolModel.RefRoom152">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="TeamClassroom" EntitySet="TeamClassroom" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom462" Association="HealthySchoolModel.RefRoom462">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="RoomTeacher" EntitySet="RoomTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool742" Association="HealthySchoolModel.RefSchool742">
+      <End Role="School" EntitySet="School" />
+      <End Role="Room" EntitySet="Room" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher472" Association="HealthySchoolModel.RefTeacher472">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="RoomTeacher" EntitySet="RoomTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool582" Association="HealthySchoolModel.RefSchool582">
+      <End Role="School" EntitySet="School" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool752" Association="HealthySchoolModel.RefSchool752">
+      <End Role="School" EntitySet="School" />
+      <End Role="Asset" EntitySet="Asset" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1332" Association="HealthySchoolModel.RefTeacher1332">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="StockIn" EntitySet="StockIn" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent1112" Association="HealthySchoolModel.RefStudent1112">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Tips" EntitySet="Tips" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent172" Association="HealthySchoolModel.RefStudent172">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentParent" EntitySet="StudentParent" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent202" Association="HealthySchoolModel.RefStudent202">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent42" Association="HealthySchoolModel.RefStudent42">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="TeamStudent" EntitySet="TeamStudent" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher352" Association="HealthySchoolModel.RefTeacher352">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher12" Association="HealthySchoolModel.RefTeacher12">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeamTeacher" EntitySet="TeamTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1292" Association="HealthySchoolModel.RefTeacher1292">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherTag" EntitySet="TeacherTag" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher212" Association="HealthySchoolModel.RefTeacher212">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher232" Association="HealthySchoolModel.RefTeacher232">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher612" Association="HealthySchoolModel.RefTeacher612">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Visitor" EntitySet="Visitor" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher952" Association="HealthySchoolModel.RefTeacher952">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherRole" EntitySet="TeacherRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher992" Association="HealthySchoolModel.RefTeacher992">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherLog" EntitySet="TeacherLog" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser812" Association="HealthySchoolModel.RefWeiXinUser812">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser782" Association="HealthySchoolModel.RefWeiXinUser782">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="VerifyCode" EntitySet="VerifyCode" />
+    </AssociationSet>
+    <EntitySet Name="TinyAppSession" EntityType="HealthySchoolModel.TinyAppSession" />
+    <EntitySet Name="Team" EntityType="HealthySchoolModel.Team" />
+    <AssociationSet Name="RefRoom112" Association="HealthySchoolModel.RefRoom112">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool732" Association="HealthySchoolModel.RefSchool732">
+      <End Role="School" EntitySet="School" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam32" Association="HealthySchoolModel.RefTeam32">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam1162" Association="HealthySchoolModel.RefTeam1162">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamNews" EntitySet="TeamNews" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam1242" Association="HealthySchoolModel.RefTeam1242">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamSchedule" EntitySet="TeamSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam162" Association="HealthySchoolModel.RefTeam162">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamClassroom" EntitySet="TeamClassroom" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam22" Association="HealthySchoolModel.RefTeam22">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamTeacher" EntitySet="TeamTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam52" Association="HealthySchoolModel.RefTeam52">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamStudent" EntitySet="TeamStudent" />
+    </AssociationSet>
+    <EntitySet Name="Schedule" EntityType="HealthySchoolModel.Schedule" />
+    <AssociationSet Name="RefSchedule1232" Association="HealthySchoolModel.RefSchedule1232">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="TeamSchedule" EntitySet="TeamSchedule" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AbsenceRecord">
+    <Key>
+      <PropertyRef Name="AbsenceRecordId" />
+    </Key>
+    <Property Name="AbsenceRecordId" Type="Guid" Nullable="false" />
+    <Property Name="SpecDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Reason" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PeopleType" Type="Byte" Nullable="false" />
+    <Property Name="StudentId" Type="Guid" />
+    <Property Name="TeacherId" Type="Guid" />
+    <Property Name="Type" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefAbsenceRecord502" FromRole="AbsenceRecord" ToRole="ExceptionCase" />
+    <NavigationProperty Name="DataDictionary" Relationship="HealthySchoolModel.RefDataDictionary1312" FromRole="AbsenceRecord" ToRole="DataDictionary" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent642" FromRole="AbsenceRecord" ToRole="Student" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher652" FromRole="AbsenceRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="AirRecord">
+    <Key>
+      <PropertyRef Name="AirRecordId" />
+    </Key>
+    <Property Name="AirRecordId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Attachment" Relationship="HealthySchoolModel.RefAirRecord372" FromRole="AirRecord" ToRole="Attachment" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom302" FromRole="AirRecord" ToRole="Room" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher322" FromRole="AirRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Arrangement">
+    <Key>
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="ArrangementId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Frequence" Type="Int32" Nullable="false" />
+    <Property Name="RoomNum" Type="Int32" Nullable="false" />
+    <Property Name="FrequenceType" Type="Byte" Nullable="false" />
+    <Property Name="WeekDays" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ArrangementDetail" Relationship="HealthySchoolModel.RefArrangement1052" FromRole="Arrangement" ToRole="ArrangementDetail" />
+    <NavigationProperty Name="ArrangementAsset" Relationship="HealthySchoolModel.RefArrangement1062" FromRole="Arrangement" ToRole="ArrangementAsset" />
+    <NavigationProperty Name="RoomPlan" Relationship="HealthySchoolModel.RefArrangement1262" FromRole="Arrangement" ToRole="RoomPlan" />
+  </EntityType>
+  <EntityType Name="ArrangementAsset">
+    <Key>
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="ArrangementId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Arrangement" Relationship="HealthySchoolModel.RefArrangement1062" FromRole="ArrangementAsset" ToRole="Arrangement" />
+  </EntityType>
+  <EntityType Name="ArrangementDetail">
+    <Key>
+      <PropertyRef Name="ArrangementDetailId" />
+    </Key>
+    <Property Name="ArrangementDetailId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ArrangementId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Arrangement" Relationship="HealthySchoolModel.RefArrangement1052" FromRole="ArrangementDetail" ToRole="Arrangement" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="Int32" Nullable="false" />
+    <Property Name="Height" Type="Int32" Nullable="false" />
+    <Property Name="OriginalName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="AirRecordId" Type="Guid" />
+    <Property Name="DisinfectRecordId" Type="Guid" />
+    <NavigationProperty Name="AirRecord" Relationship="HealthySchoolModel.RefAirRecord372" FromRole="Attachment" ToRole="AirRecord" />
+    <NavigationProperty Name="DisinfectRecord" Relationship="HealthySchoolModel.RefDisinfectRecord382" FromRole="Attachment" ToRole="DisinfectRecord" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProvinceId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="County" Relationship="HealthySchoolModel.RefCity562" FromRole="City" ToRole="County" />
+    <NavigationProperty Name="Province" Relationship="HealthySchoolModel.RefProvince802" FromRole="City" ToRole="Province" />
+  </EntityType>
+  <EntityType Name="ClaimRecord">
+    <Key>
+      <PropertyRef Name="ClaimRecord1" />
+    </Key>
+    <Property Name="ClaimRecord1" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Num" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Remark" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="Keeper" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1302" FromRole="ClaimRecord" ToRole="Teacher" />
+    <NavigationProperty Name="Teacher1" Relationship="HealthySchoolModel.RefTeacher542" FromRole="ClaimRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="County">
+    <Key>
+      <PropertyRef Name="CountyId" />
+    </Key>
+    <Property Name="CountyId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CityId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="HealthySchoolModel.RefCity562" FromRole="County" ToRole="City" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefCounty572" FromRole="County" ToRole="School" />
+  </EntityType>
+  <EntityType Name="DataDictionary">
+    <Key>
+      <PropertyRef Name="DataDictionaryId" />
+    </Key>
+    <Property Name="DataDictionaryId" Type="Guid" Nullable="false" />
+    <Property Name="Catalogs" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="AbsenceRecord" Relationship="HealthySchoolModel.RefDataDictionary1312" FromRole="DataDictionary" ToRole="AbsenceRecord" />
+    <NavigationProperty Name="TeacherTag" Relationship="HealthySchoolModel.RefDataDictionary1282" FromRole="DataDictionary" ToRole="TeacherTag" />
+  </EntityType>
+  <EntityType Name="DisinfectRecord">
+    <Key>
+      <PropertyRef Name="DisinfectRecordId" />
+    </Key>
+    <Property Name="DisinfectRecordId" Type="Guid" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AssetsComment" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Attachment" Relationship="HealthySchoolModel.RefDisinfectRecord382" FromRole="DisinfectRecord" ToRole="Attachment" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom292" FromRole="DisinfectRecord" ToRole="Room" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher832" FromRole="DisinfectRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PublishTime" Type="DateTime" Precision="3" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Ext" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <Property Name="Views" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1132" FromRole="Document" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="EnterRecord">
+    <Key>
+      <PropertyRef Name="EnterRecordId" />
+    </Key>
+    <Property Name="EnterRecordId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Temperature" Type="Decimal" Nullable="false" Precision="18" Scale="1" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="PeopleType" Type="Byte" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" />
+    <Property Name="StudentId" Type="Guid" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent522" FromRole="EnterRecord" ToRole="Student" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher512" FromRole="EnterRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="ExceptionCase">
+    <Key>
+      <PropertyRef Name="ExceptionCaseId" />
+    </Key>
+    <Property Name="ExceptionCaseId" Type="Guid" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="DateTime" Precision="3" />
+    <Property Name="PeopleType" Type="Byte" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AbsenceRecordId" Type="Guid" />
+    <Property Name="TeacherId" Type="Guid" />
+    <Property Name="StudentId" Type="Guid" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="StudentBbtRecordId" Type="Guid" />
+    <Property Name="TeacherBbtRecordId" Type="Guid" />
+    <Property Name="ParentCheckinId" Type="Guid" />
+    <NavigationProperty Name="AbsenceRecord" Relationship="HealthySchoolModel.RefAbsenceRecord502" FromRole="ExceptionCase" ToRole="AbsenceRecord" />
+    <NavigationProperty Name="Notification" Relationship="HealthySchoolModel.RefExceptionCase1022" FromRole="ExceptionCase" ToRole="Notification" />
+    <NavigationProperty Name="ExceptionCaseHistory" Relationship="HealthySchoolModel.RefExceptionCase482" FromRole="ExceptionCase" ToRole="ExceptionCaseHistory" />
+    <NavigationProperty Name="Parent" Relationship="HealthySchoolModel.RefParent682" FromRole="ExceptionCase" ToRole="Parent" />
+    <NavigationProperty Name="ParentCheckin" Relationship="HealthySchoolModel.RefParentCheckin1212" FromRole="ExceptionCase" ToRole="ParentCheckin" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent672" FromRole="ExceptionCase" ToRole="Student" />
+    <NavigationProperty Name="StudentBbtRecord" Relationship="HealthySchoolModel.RefStudentBbtRecord1192" FromRole="ExceptionCase" ToRole="StudentBbtRecord" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher662" FromRole="ExceptionCase" ToRole="Teacher" />
+    <NavigationProperty Name="TeacherBbtRecord" Relationship="HealthySchoolModel.RefTeacherBbtRecord1202" FromRole="ExceptionCase" ToRole="TeacherBbtRecord" />
+  </EntityType>
+  <EntityType Name="ExceptionCaseHistory">
+    <Key>
+      <PropertyRef Name="ExceptionCaseHistoryId" />
+    </Key>
+    <Property Name="ExceptionCaseHistoryId" Type="Guid" Nullable="false" />
+    <Property Name="HealthyStatus" Type="Byte" Nullable="false" />
+    <Property Name="ExceptionCaseId" Type="Guid" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefExceptionCase482" FromRole="ExceptionCaseHistory" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher822" FromRole="ExceptionCaseHistory" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="HolidayId" />
+    </Key>
+    <Property Name="HolidayId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpecDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefSchool762" FromRole="Holiday" ToRole="School" />
+  </EntityType>
+  <EntityType Name="Mng_UserRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Role" Relationship="HealthySchoolModel.RefRole882" FromRole="Mng_UserRole" ToRole="Role" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher942" FromRole="Mng_UserRole" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="OrderFlag" Type="Int32" Nullable="false" />
+    <Property Name="Num" Type="Int32" Nullable="false" />
+    <Property Name="Picture" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="CheckinTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ModuleItem" Relationship="HealthySchoolModel.RefModule862" FromRole="Module" ToRole="ModuleItem" />
+    <NavigationProperty Name="ModuleRolePermission" Relationship="HealthySchoolModel.RefModule922" FromRole="Module" ToRole="ModuleRolePermission" />
+  </EntityType>
+  <EntityType Name="ModuleItem">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="Guid" Nullable="false" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PageUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MenuItemPicture" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IsMenuItem" Type="Boolean" Nullable="false" />
+    <Property Name="ModuleId" Type="Guid" Nullable="false" />
+    <Property Name="OrderFlag" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Module" Relationship="HealthySchoolModel.RefModule862" FromRole="ModuleItem" ToRole="Module" />
+    <NavigationProperty Name="RolePermission" Relationship="HealthySchoolModel.RefModuleItem842" FromRole="ModuleItem" ToRole="RolePermission" />
+    <NavigationProperty Name="ModuleItemPrivilege" Relationship="HealthySchoolModel.RefModuleItem852" FromRole="ModuleItem" ToRole="ModuleItemPrivilege" />
+    <NavigationProperty Name="ModuleItem1" Relationship="HealthySchoolModel.RefModuleItem872" FromRole="ModuleItem" ToRole="ModuleItem1" />
+    <NavigationProperty Name="ModuleItem2" Relationship="HealthySchoolModel.RefModuleItem872" FromRole="ModuleItem1" ToRole="ModuleItem" />
+  </EntityType>
+  <EntityType Name="ModuleItemPrivilege">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+      <PropertyRef Name="PrivilegeId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="Guid" Nullable="false" />
+    <Property Name="PrivilegeId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="ModuleItem" Relationship="HealthySchoolModel.RefModuleItem852" FromRole="ModuleItemPrivilege" ToRole="ModuleItem" />
+    <NavigationProperty Name="Privilege" Relationship="HealthySchoolModel.RefPrivilege932" FromRole="ModuleItemPrivilege" ToRole="Privilege" />
+  </EntityType>
+  <EntityType Name="ModuleRolePermission">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ModuleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Module" Relationship="HealthySchoolModel.RefModule922" FromRole="ModuleRolePermission" ToRole="Module" />
+    <NavigationProperty Name="Role" Relationship="HealthySchoolModel.RefRole902" FromRole="ModuleRolePermission" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Name="NewsId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RangeType" Type="Byte" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="PeopleType" Type="Byte" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CoverUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PublishTime" Type="DateTime" Precision="3" />
+    <Property Name="Hits" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="TeamNews" Relationship="HealthySchoolModel.RefNews1142" FromRole="News" ToRole="TeamNews" />
+    <NavigationProperty Name="NewsAttachment" Relationship="HealthySchoolModel.RefNews1222" FromRole="News" ToRole="NewsAttachment" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1122" FromRole="News" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="NewsAttachment">
+    <Key>
+      <PropertyRef Name="NewsAttachmentId" />
+    </Key>
+    <Property Name="NewsAttachmentId" Type="Guid" Nullable="false" />
+    <Property Name="NewsId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OriginalName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Ext" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Hits" Type="Int32" Nullable="false" />
+    <Property Name="FileSize" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="News" Relationship="HealthySchoolModel.RefNews1222" FromRole="NewsAttachment" ToRole="News" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="NotificationId" />
+    </Key>
+    <Property Name="NotificationId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InitiatorId" Type="Guid" />
+    <Property Name="Handler" Type="Guid" Nullable="false" />
+    <Property Name="ExceptionCaseId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefExceptionCase1022" FromRole="Notification" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1002" FromRole="Notification" ToRole="Teacher" />
+    <NavigationProperty Name="Teacher1" Relationship="HealthySchoolModel.RefTeacher1012" FromRole="Notification" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Parent">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="ParentId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="HealthyStatus" Type="Byte" Nullable="false" />
+    <Property Name="IdNo" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastAccessTime" Type="DateTime" Precision="3" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="UnionId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefParent682" FromRole="Parent" ToRole="ExceptionCase" />
+    <NavigationProperty Name="StudentParent" Relationship="HealthySchoolModel.RefParent182" FromRole="Parent" ToRole="StudentParent" />
+    <NavigationProperty Name="ParentCheckin" Relationship="HealthySchoolModel.RefParent242" FromRole="Parent" ToRole="ParentCheckin" />
+    <NavigationProperty Name="StudentBbtRecord" Relationship="HealthySchoolModel.RefParent342" FromRole="Parent" ToRole="StudentBbtRecord" />
+    <NavigationProperty Name="WeiXinUser" Relationship="HealthySchoolModel.RefWeiXinUser792" FromRole="Parent" ToRole="WeiXinUser" />
+  </EntityType>
+  <EntityType Name="ParentCheckin">
+    <Key>
+      <PropertyRef Name="ParentCheckinId" />
+    </Key>
+    <Property Name="ParentCheckinId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="ParentId" Type="Guid" Nullable="false" />
+    <Property Name="SpecDay" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefParentCheckin1212" FromRole="ParentCheckin" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Parent" Relationship="HealthySchoolModel.RefParent242" FromRole="ParentCheckin" ToRole="Parent" />
+    <Property Name="PhotoUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Privilege">
+    <Key>
+      <PropertyRef Name="PrivilegeId" />
+    </Key>
+    <Property Name="PrivilegeId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="CheckinTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="ModuleItemPrivilege" Relationship="HealthySchoolModel.RefPrivilege932" FromRole="Privilege" ToRole="ModuleItemPrivilege" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="ProvinceId" />
+    </Key>
+    <Property Name="ProvinceId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="City" Relationship="HealthySchoolModel.RefProvince802" FromRole="Province" ToRole="City" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Num" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Mng_UserRole" Relationship="HealthySchoolModel.RefRole882" FromRole="Role" ToRole="Mng_UserRole" />
+    <NavigationProperty Name="ModuleRolePermission" Relationship="HealthySchoolModel.RefRole902" FromRole="Role" ToRole="ModuleRolePermission" />
+    <NavigationProperty Name="RolePermission" Relationship="HealthySchoolModel.RefRole912" FromRole="Role" ToRole="RolePermission" />
+    <NavigationProperty Name="TeacherRole" Relationship="HealthySchoolModel.RefRole962" FromRole="Role" ToRole="TeacherRole" />
+  </EntityType>
+  <EntityType Name="RolePermission">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EffectiveCode" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ModuleItem" Relationship="HealthySchoolModel.RefModuleItem842" FromRole="RolePermission" ToRole="ModuleItem" />
+    <NavigationProperty Name="Role" Relationship="HealthySchoolModel.RefRole912" FromRole="RolePermission" ToRole="Role" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="MeasureType" Type="Byte" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="AirRecord" Relationship="HealthySchoolModel.RefRoom302" FromRole="Room" ToRole="AirRecord" />
+    <NavigationProperty Name="DisinfectRecord" Relationship="HealthySchoolModel.RefRoom292" FromRole="Room" ToRole="DisinfectRecord" />
+    <NavigationProperty Name="Tips" Relationship="HealthySchoolModel.RefRoom1102" FromRole="Room" ToRole="Tips" />
+    <NavigationProperty Name="RoomPlan" Relationship="HealthySchoolModel.RefRoom1252" FromRole="Room" ToRole="RoomPlan" />
+    <NavigationProperty Name="TeamClassroom" Relationship="HealthySchoolModel.RefRoom152" FromRole="Room" ToRole="TeamClassroom" />
+    <NavigationProperty Name="RoomTeacher" Relationship="HealthySchoolModel.RefRoom462" FromRole="Room" ToRole="RoomTeacher" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefSchool742" FromRole="Room" ToRole="School" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefRoom112" FromRole="Room" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="RoomPlan">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="ArrangementId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Arrangement" Relationship="HealthySchoolModel.RefArrangement1262" FromRole="RoomPlan" ToRole="Arrangement" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom1252" FromRole="RoomPlan" ToRole="Room" />
+  </EntityType>
+  <EntityType Name="RoomTeacher">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom462" FromRole="RoomTeacher" ToRole="Room" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher472" FromRole="RoomTeacher" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="SchoolId" />
+    </Key>
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeamNum" Type="Int32" Nullable="false" />
+    <Property Name="TeacherNum" Type="Int32" Nullable="false" />
+    <Property Name="StudentNum" Type="Int32" Nullable="false" />
+    <Property Name="RoomNum" Type="Int32" Nullable="false" />
+    <Property Name="ParentNum" Type="Int32" Nullable="false" />
+    <Property Name="CountyId" Type="Guid" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubDomain" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NeedDisInfectPhoto" Type="Byte" Nullable="false" />
+    <Property Name="NeedAirPhoto" Type="Byte" Nullable="false" />
+    <Property Name="NeedFamilyTest" Type="Boolean" Nullable="false" />
+    <Property Name="NeedTemperaturePhoto" Type="Byte" Nullable="false" />
+    <Property Name="EnterMode" Type="Boolean" Nullable="false" />
+    <Property Name="NeedClaimModule" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="County" Relationship="HealthySchoolModel.RefCounty572" FromRole="School" ToRole="County" />
+    <NavigationProperty Name="Holiday" Relationship="HealthySchoolModel.RefSchool762" FromRole="School" ToRole="Holiday" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefSchool742" FromRole="School" ToRole="Room" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefSchool582" FromRole="School" ToRole="Teacher" />
+    <NavigationProperty Name="Asset" Relationship="HealthySchoolModel.RefSchool752" FromRole="School" ToRole="Asset" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefSchool732" FromRole="School" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="StockIn">
+    <Key>
+      <PropertyRef Name="StockInId" />
+    </Key>
+    <Property Name="StockInId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Num" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Provider" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BuyTime" Type="DateTime" Precision="3" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1332" FromRole="StockIn" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Guid" Nullable="false" />
+    <Property Name="AvatarUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="HealthyStatus" Type="Byte" Nullable="false" />
+    <Property Name="IdNo" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="No" Type="Int32" Nullable="false" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="AbsenceRecord" Relationship="HealthySchoolModel.RefStudent642" FromRole="Student" ToRole="AbsenceRecord" />
+    <NavigationProperty Name="EnterRecord" Relationship="HealthySchoolModel.RefStudent522" FromRole="Student" ToRole="EnterRecord" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefStudent672" FromRole="Student" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Tips" Relationship="HealthySchoolModel.RefStudent1112" FromRole="Student" ToRole="Tips" />
+    <NavigationProperty Name="StudentParent" Relationship="HealthySchoolModel.RefStudent172" FromRole="Student" ToRole="StudentParent" />
+    <NavigationProperty Name="StudentBbtRecord" Relationship="HealthySchoolModel.RefStudent202" FromRole="Student" ToRole="StudentBbtRecord" />
+    <NavigationProperty Name="TeamStudent" Relationship="HealthySchoolModel.RefStudent42" FromRole="Student" ToRole="TeamStudent" />
+    <Property Name="LastAccessTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam32" FromRole="Student" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="StudentBbtRecord">
+    <Key>
+      <PropertyRef Name="StudentBbtRecordId" />
+    </Key>
+    <Property Name="StudentBbtRecordId" Type="Guid" Nullable="false" />
+    <Property Name="SpecDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Temperature" Type="Decimal" Nullable="false" Precision="18" Scale="1" />
+    <Property Name="PhotoUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="StudentId" Type="Guid" Nullable="false" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="TeacherId" Type="Guid" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefStudentBbtRecord1192" FromRole="StudentBbtRecord" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Parent" Relationship="HealthySchoolModel.RefParent342" FromRole="StudentBbtRecord" ToRole="Parent" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent202" FromRole="StudentBbtRecord" ToRole="Student" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher352" FromRole="StudentBbtRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="StudentParent">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="StudentId" Type="Guid" Nullable="false" />
+    <Property Name="ParentId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Relationship" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Parent" Relationship="HealthySchoolModel.RefParent182" FromRole="StudentParent" ToRole="Parent" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent172" FromRole="StudentParent" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="IsSchoolAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="HealthyStatus" Type="Byte" Nullable="false" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="No" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdNo" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="LoginTimes" Type="Int32" Nullable="false" />
+    <Property Name="LastAccessTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="AvatarUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <Property Name="UnionId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AbsenceRecord" Relationship="HealthySchoolModel.RefTeacher652" FromRole="Teacher" ToRole="AbsenceRecord" />
+    <NavigationProperty Name="AirRecord" Relationship="HealthySchoolModel.RefTeacher322" FromRole="Teacher" ToRole="AirRecord" />
+    <NavigationProperty Name="ClaimRecord" Relationship="HealthySchoolModel.RefTeacher1302" FromRole="Teacher" ToRole="ClaimRecord" />
+    <NavigationProperty Name="ClaimRecord1" Relationship="HealthySchoolModel.RefTeacher542" FromRole="Teacher" ToRole="ClaimRecord" />
+    <NavigationProperty Name="DisinfectRecord" Relationship="HealthySchoolModel.RefTeacher832" FromRole="Teacher" ToRole="DisinfectRecord" />
+    <NavigationProperty Name="Document" Relationship="HealthySchoolModel.RefTeacher1132" FromRole="Teacher" ToRole="Document" />
+    <NavigationProperty Name="EnterRecord" Relationship="HealthySchoolModel.RefTeacher512" FromRole="Teacher" ToRole="EnterRecord" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefTeacher662" FromRole="Teacher" ToRole="ExceptionCase" />
+    <NavigationProperty Name="ExceptionCaseHistory" Relationship="HealthySchoolModel.RefTeacher822" FromRole="Teacher" ToRole="ExceptionCaseHistory" />
+    <NavigationProperty Name="Mng_UserRole" Relationship="HealthySchoolModel.RefTeacher942" FromRole="Teacher" ToRole="Mng_UserRole" />
+    <NavigationProperty Name="News" Relationship="HealthySchoolModel.RefTeacher1122" FromRole="Teacher" ToRole="News" />
+    <NavigationProperty Name="Notification" Relationship="HealthySchoolModel.RefTeacher1002" FromRole="Teacher" ToRole="Notification" />
+    <NavigationProperty Name="Notification1" Relationship="HealthySchoolModel.RefTeacher1012" FromRole="Teacher" ToRole="Notification" />
+    <NavigationProperty Name="RoomTeacher" Relationship="HealthySchoolModel.RefTeacher472" FromRole="Teacher" ToRole="RoomTeacher" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefSchool582" FromRole="Teacher" ToRole="School" />
+    <NavigationProperty Name="StockIn" Relationship="HealthySchoolModel.RefTeacher1332" FromRole="Teacher" ToRole="StockIn" />
+    <NavigationProperty Name="StudentBbtRecord" Relationship="HealthySchoolModel.RefTeacher352" FromRole="Teacher" ToRole="StudentBbtRecord" />
+    <NavigationProperty Name="TeamTeacher" Relationship="HealthySchoolModel.RefTeacher12" FromRole="Teacher" ToRole="TeamTeacher" />
+    <NavigationProperty Name="TeacherTag" Relationship="HealthySchoolModel.RefTeacher1292" FromRole="Teacher" ToRole="TeacherTag" />
+    <NavigationProperty Name="TeacherBbtRecord" Relationship="HealthySchoolModel.RefTeacher212" FromRole="Teacher" ToRole="TeacherBbtRecord" />
+    <NavigationProperty Name="TeacherBbtRecord1" Relationship="HealthySchoolModel.RefTeacher232" FromRole="Teacher" ToRole="TeacherBbtRecord" />
+    <NavigationProperty Name="Visitor" Relationship="HealthySchoolModel.RefTeacher612" FromRole="Teacher" ToRole="Visitor" />
+    <NavigationProperty Name="TeacherRole" Relationship="HealthySchoolModel.RefTeacher952" FromRole="Teacher" ToRole="TeacherRole" />
+    <NavigationProperty Name="TeacherLog" Relationship="HealthySchoolModel.RefTeacher992" FromRole="Teacher" ToRole="TeacherLog" />
+    <NavigationProperty Name="WeiXinUser" Relationship="HealthySchoolModel.RefWeiXinUser812" FromRole="Teacher" ToRole="WeiXinUser" />
+  </EntityType>
+  <EntityType Name="TeacherBbtRecord">
+    <Key>
+      <PropertyRef Name="TeacherBbtRecordId" />
+    </Key>
+    <Property Name="TeacherBbtRecordId" Type="Guid" Nullable="false" />
+    <Property Name="SpecDay" Type="DateTime" Precision="3" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Temperature" Type="Decimal" Nullable="false" Precision="18" Scale="1" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="Measurer" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ExceptionCase" Relationship="HealthySchoolModel.RefTeacherBbtRecord1202" FromRole="TeacherBbtRecord" ToRole="ExceptionCase" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher212" FromRole="TeacherBbtRecord" ToRole="Teacher" />
+    <NavigationProperty Name="Teacher1" Relationship="HealthySchoolModel.RefTeacher232" FromRole="TeacherBbtRecord" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="TeacherLog">
+    <Key>
+      <PropertyRef Name="TeacherLogId" />
+    </Key>
+    <Property Name="TeacherLogId" Type="Guid" Nullable="false" />
+    <Property Name="Operation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Ip" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher992" FromRole="TeacherLog" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="TeacherRole">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="HealthySchoolModel.RefRole962" FromRole="TeacherRole" ToRole="Role" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher952" FromRole="TeacherRole" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="TeacherTag">
+    <Key>
+      <PropertyRef Name="DataDictionaryId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="DataDictionaryId" Type="Guid" Nullable="false" />
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="DataDictionary" Relationship="HealthySchoolModel.RefDataDictionary1282" FromRole="TeacherTag" ToRole="DataDictionary" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher1292" FromRole="TeacherTag" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="TeamClassroom">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="RoomId" Type="Guid" Nullable="false" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom152" FromRole="TeamClassroom" ToRole="Room" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam162" FromRole="TeamClassroom" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="TeamNews">
+    <Key>
+      <PropertyRef Name="NewsId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="NewsId" Type="Guid" Nullable="false" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="News" Relationship="HealthySchoolModel.RefNews1142" FromRole="TeamNews" ToRole="News" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam1162" FromRole="TeamNews" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="TeamSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Guid" Nullable="false" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam1242" FromRole="TeamSchedule" ToRole="Team" />
+    <NavigationProperty Name="Schedule" Relationship="HealthySchoolModel.RefSchedule1232" FromRole="TeamSchedule" ToRole="Schedule" />
+  </EntityType>
+  <EntityType Name="TeamStudent">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="StudentId" Type="Guid" Nullable="false" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent42" FromRole="TeamStudent" ToRole="Student" />
+    <Property Name="No" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam52" FromRole="TeamStudent" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="TeamTeacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeacherId" Type="Guid" Nullable="false" />
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsHead" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher12" FromRole="TeamTeacher" ToRole="Teacher" />
+    <NavigationProperty Name="Team" Relationship="HealthySchoolModel.RefTeam22" FromRole="TeamTeacher" ToRole="Team" />
+  </EntityType>
+  <EntityType Name="Tips">
+    <Key>
+      <PropertyRef Name="TipsId" />
+    </Key>
+    <Property Name="TipsId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FontColor" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ActionTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RoomId" Type="Guid" />
+    <Property Name="StudentId" Type="Guid" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom1102" FromRole="Tips" ToRole="Room" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefStudent1112" FromRole="Tips" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="VerifyCode">
+    <Key>
+      <PropertyRef Name="VerifyCodeId" />
+    </Key>
+    <Property Name="VerifyCodeId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Ip" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="VerifyTime" Type="DateTime" Precision="3" />
+    <Property Name="UnionId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WeiXinUser" Relationship="HealthySchoolModel.RefWeiXinUser782" FromRole="VerifyCode" ToRole="WeiXinUser" />
+  </EntityType>
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="VisitorId" />
+    </Key>
+    <Property Name="VisitorId" Type="Guid" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdNo" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Host" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Recorder" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefTeacher612" FromRole="Visitor" ToRole="Teacher" />
+  </EntityType>
+  <EntityType Name="WeiXinUser">
+    <Key>
+      <PropertyRef Name="UnionId" />
+    </Key>
+    <Property Name="UnionId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NickName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeadImage" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TinyAppOpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ComeFrom" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccessTimes" Type="Int32" Nullable="false" />
+    <Property Name="LastAccessTime" Type="DateTime" Precision="3" />
+    <Property Name="Subscribe" Type="Boolean" Nullable="false" />
+    <Property Name="Comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Parent" Relationship="HealthySchoolModel.RefWeiXinUser792" FromRole="WeiXinUser" ToRole="Parent" />
+    <NavigationProperty Name="Teacher" Relationship="HealthySchoolModel.RefWeiXinUser812" FromRole="WeiXinUser" ToRole="Teacher" />
+    <NavigationProperty Name="VerifyCode" Relationship="HealthySchoolModel.RefWeiXinUser782" FromRole="WeiXinUser" ToRole="VerifyCode" />
+  </EntityType>
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Num" />
+      <PropertyRef Name="Checkintime" />
+      <PropertyRef Name="SchoolId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Num" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefSchool752" FromRole="Asset" ToRole="School" />
+  </EntityType>
+  <Association Name="RefAbsenceRecord502">
+    <End Type="HealthySchoolModel.AbsenceRecord" Role="AbsenceRecord" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AbsenceRecord">
+        <PropertyRef Name="AbsenceRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="AbsenceRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDataDictionary1312">
+    <End Type="HealthySchoolModel.DataDictionary" Role="DataDictionary" Multiplicity="1" />
+    <End Type="HealthySchoolModel.AbsenceRecord" Role="AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataDictionary">
+        <PropertyRef Name="DataDictionaryId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent642">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.AbsenceRecord" Role="AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher652">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.AbsenceRecord" Role="AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefAirRecord372">
+    <End Type="HealthySchoolModel.AirRecord" Role="AirRecord" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Attachment" Role="Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AirRecord">
+        <PropertyRef Name="AirRecordId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="AirRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom302">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="HealthySchoolModel.AirRecord" Role="AirRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="AirRecord">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher322">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.AirRecord" Role="AirRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="AirRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1052">
+    <End Type="HealthySchoolModel.Arrangement" Role="Arrangement" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ArrangementDetail" Role="ArrangementDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="ArrangementDetail">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1062">
+    <End Type="HealthySchoolModel.Arrangement" Role="Arrangement" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ArrangementAsset" Role="ArrangementAsset" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="ArrangementAsset">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1262">
+    <End Type="HealthySchoolModel.Arrangement" Role="Arrangement" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RoomPlan" Role="RoomPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="RoomPlan">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDisinfectRecord382">
+    <End Type="HealthySchoolModel.DisinfectRecord" Role="DisinfectRecord" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Attachment" Role="Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisinfectRecord">
+        <PropertyRef Name="DisinfectRecordId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="DisinfectRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCity562">
+    <End Type="HealthySchoolModel.City" Role="City" Multiplicity="1" />
+    <End Type="HealthySchoolModel.County" Role="County" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="County">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefProvince802">
+    <End Type="HealthySchoolModel.Province" Role="Province" Multiplicity="1" />
+    <End Type="HealthySchoolModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="ProvinceId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1302">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ClaimRecord" Role="ClaimRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ClaimRecord">
+        <PropertyRef Name="Keeper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher542">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ClaimRecord" Role="ClaimRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ClaimRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCounty572">
+    <End Type="HealthySchoolModel.County" Role="County" Multiplicity="1" />
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="County">
+        <PropertyRef Name="CountyId" />
+      </Principal>
+      <Dependent Role="School">
+        <PropertyRef Name="CountyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDataDictionary1282">
+    <End Type="HealthySchoolModel.DataDictionary" Role="DataDictionary" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherTag" Role="TeacherTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataDictionary">
+        <PropertyRef Name="DataDictionaryId" />
+      </Principal>
+      <Dependent Role="TeacherTag">
+        <PropertyRef Name="DataDictionaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom292">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="HealthySchoolModel.DisinfectRecord" Role="DisinfectRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="DisinfectRecord">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher832">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.DisinfectRecord" Role="DisinfectRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="DisinfectRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1132">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent522">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.EnterRecord" Role="EnterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="EnterRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher512">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.EnterRecord" Role="EnterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="EnterRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefExceptionCase1022">
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExceptionCase">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefExceptionCase482">
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCaseHistory" Role="ExceptionCaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExceptionCase">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Principal>
+      <Dependent Role="ExceptionCaseHistory">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent682">
+    <End Type="HealthySchoolModel.Parent" Role="Parent" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParentCheckin1212">
+    <End Type="HealthySchoolModel.ParentCheckin" Role="ParentCheckin" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParentCheckin">
+        <PropertyRef Name="ParentCheckinId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="ParentCheckinId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent672">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudentBbtRecord1192">
+    <End Type="HealthySchoolModel.StudentBbtRecord" Role="StudentBbtRecord" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentBbtRecord">
+        <PropertyRef Name="StudentBbtRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="StudentBbtRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher662">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacherBbtRecord1202">
+    <End Type="HealthySchoolModel.TeacherBbtRecord" Role="TeacherBbtRecord" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ExceptionCase" Role="ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeacherBbtRecord">
+        <PropertyRef Name="TeacherBbtRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="TeacherBbtRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher822">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ExceptionCaseHistory" Role="ExceptionCaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ExceptionCaseHistory">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool762">
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Holiday" Role="Holiday" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Holiday">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole882">
+    <End Type="HealthySchoolModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Mng_UserRole" Role="Mng_UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Mng_UserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher942">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Mng_UserRole" Role="Mng_UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Mng_UserRole">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModule862">
+    <End Type="HealthySchoolModel.Module" Role="Module" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ModuleItem" Role="ModuleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="ModuleItem">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModule922">
+    <End Type="HealthySchoolModel.Module" Role="Module" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ModuleRolePermission" Role="ModuleRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="ModuleRolePermission">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem842">
+    <End Type="HealthySchoolModel.ModuleItem" Role="ModuleItem" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RolePermission" Role="RolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="RolePermission">
+        <PropertyRef Name="ModuleItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem852">
+    <End Type="HealthySchoolModel.ModuleItem" Role="ModuleItem" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ModuleItemPrivilege" Role="ModuleItemPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="ModuleItemPrivilege">
+        <PropertyRef Name="ModuleItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem872">
+    <End Type="HealthySchoolModel.ModuleItem" Role="ModuleItem" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.ModuleItem" Role="ModuleItem1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="ModuleItem1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPrivilege932">
+    <End Type="HealthySchoolModel.Privilege" Role="Privilege" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ModuleItemPrivilege" Role="ModuleItemPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Privilege">
+        <PropertyRef Name="PrivilegeId" />
+      </Principal>
+      <Dependent Role="ModuleItemPrivilege">
+        <PropertyRef Name="PrivilegeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole902">
+    <End Type="HealthySchoolModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ModuleRolePermission" Role="ModuleRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="ModuleRolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefNews1142">
+    <End Type="HealthySchoolModel.News" Role="News" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamNews" Role="TeamNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="NewsId" />
+      </Principal>
+      <Dependent Role="TeamNews">
+        <PropertyRef Name="NewsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefNews1222">
+    <End Type="HealthySchoolModel.News" Role="News" Multiplicity="1" />
+    <End Type="HealthySchoolModel.NewsAttachment" Role="NewsAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="NewsId" />
+      </Principal>
+      <Dependent Role="NewsAttachment">
+        <PropertyRef Name="NewsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1122">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.News" Role="News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1002">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="InitiatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1012">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Notification" Role="Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="Handler" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent182">
+    <End Type="HealthySchoolModel.Parent" Role="Parent" Multiplicity="1" />
+    <End Type="HealthySchoolModel.StudentParent" Role="StudentParent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="StudentParent">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent242">
+    <End Type="HealthySchoolModel.Parent" Role="Parent" Multiplicity="1" />
+    <End Type="HealthySchoolModel.ParentCheckin" Role="ParentCheckin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="ParentCheckin">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent342">
+    <End Type="HealthySchoolModel.Parent" Role="Parent" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.StudentBbtRecord" Role="StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser792">
+    <End Type="HealthySchoolModel.WeiXinUser" Role="WeiXinUser" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Parent" Role="Parent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="Parent">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole912">
+    <End Type="HealthySchoolModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RolePermission" Role="RolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole962">
+    <End Type="HealthySchoolModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherRole" Role="TeacherRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="TeacherRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom1102">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Tips" Role="Tips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Tips">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom1252">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RoomPlan" Role="RoomPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomPlan">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom152">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamClassroom" Role="TeamClassroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="TeamClassroom">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom462">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RoomTeacher" Role="RoomTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomTeacher">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool742">
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher472">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.RoomTeacher" Role="RoomTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="RoomTeacher">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool582">
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool752">
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Asset" Role="Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1332">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.StockIn" Role="StockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="StockIn">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent1112">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Tips" Role="Tips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Tips">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent172">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="1" />
+    <End Type="HealthySchoolModel.StudentParent" Role="StudentParent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentParent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent202">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="1" />
+    <End Type="HealthySchoolModel.StudentBbtRecord" Role="StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent42">
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamStudent" Role="TeamStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="TeamStudent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher352">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.StudentBbtRecord" Role="StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher12">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamTeacher" Role="TeamTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeamTeacher">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1292">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherTag" Role="TeacherTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherTag">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher212">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherBbtRecord" Role="TeacherBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherBbtRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher232">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherBbtRecord" Role="TeacherBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherBbtRecord">
+        <PropertyRef Name="Measurer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher612">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Visitor" Role="Visitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Visitor">
+        <PropertyRef Name="Recorder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher952">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherRole" Role="TeacherRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherRole">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher992">
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeacherLog" Role="TeacherLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherLog">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser812">
+    <End Type="HealthySchoolModel.WeiXinUser" Role="WeiXinUser" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Teacher" Role="Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser782">
+    <End Type="HealthySchoolModel.WeiXinUser" Role="WeiXinUser" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.VerifyCode" Role="VerifyCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="VerifyCode">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TinyAppSession">
+    <Key>
+      <PropertyRef Name="OpenId" />
+    </Key>
+    <Property Name="OpenId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SessionKey" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SessionId" Type="Guid" Nullable="false" />
+    <Property Name="LastActiveTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NickName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Grade" Type="Int32" Nullable="false" />
+    <Property Name="OrderNo" Type="Int32" Nullable="false" />
+    <Property Name="ColorStatus" Type="Byte" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StudentNum" Type="Int32" Nullable="false" />
+    <Property Name="TeacherNum" Type="Int32" Nullable="false" />
+    <Property Name="ParentNum" Type="Int32" Nullable="false" />
+    <Property Name="RoomId" Type="Guid" />
+    <Property Name="SchoolId" Type="Guid" Nullable="false" />
+    <Property Name="GradeYear" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Room" Relationship="HealthySchoolModel.RefRoom112" FromRole="Team" ToRole="Room" />
+    <NavigationProperty Name="School" Relationship="HealthySchoolModel.RefSchool732" FromRole="Team" ToRole="School" />
+    <NavigationProperty Name="Student" Relationship="HealthySchoolModel.RefTeam32" FromRole="Team" ToRole="Student" />
+    <NavigationProperty Name="TeamNews" Relationship="HealthySchoolModel.RefTeam1162" FromRole="Team" ToRole="TeamNews" />
+    <NavigationProperty Name="TeamSchedule" Relationship="HealthySchoolModel.RefTeam1242" FromRole="Team" ToRole="TeamSchedule" />
+    <NavigationProperty Name="TeamClassroom" Relationship="HealthySchoolModel.RefTeam162" FromRole="Team" ToRole="TeamClassroom" />
+    <NavigationProperty Name="TeamTeacher" Relationship="HealthySchoolModel.RefTeam22" FromRole="Team" ToRole="TeamTeacher" />
+    <NavigationProperty Name="TeamStudent" Relationship="HealthySchoolModel.RefTeam52" FromRole="Team" ToRole="TeamStudent" />
+  </EntityType>
+  <Association Name="RefRoom112">
+    <End Type="HealthySchoolModel.Room" Role="Room" Multiplicity="0..1" />
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool732">
+    <End Type="HealthySchoolModel.School" Role="School" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam32">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.Student" Role="Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam1162">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamNews" Role="TeamNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamNews">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam1242">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamSchedule" Role="TeamSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamSchedule">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam162">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamClassroom" Role="TeamClassroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamClassroom">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam22">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamTeacher" Role="TeamTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamTeacher">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam52">
+    <End Type="HealthySchoolModel.Team" Role="Team" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamStudent" Role="TeamStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamStudent">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Guid" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Type" Type="Byte" Nullable="false" />
+    <Property Name="StartHhmm" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="EndHhmm" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TeamNum" Type="Int32" Nullable="false" />
+    <Property Name="Checkintime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="TeamSchedule" Relationship="HealthySchoolModel.RefSchedule1232" FromRole="Schedule" ToRole="TeamSchedule" />
+  </EntityType>
+  <Association Name="RefSchedule1232">
+    <End Type="HealthySchoolModel.Schedule" Role="Schedule" Multiplicity="1" />
+    <End Type="HealthySchoolModel.TeamSchedule" Role="TeamSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ScheduleId" />
+      </Principal>
+      <Dependent Role="TeamSchedule">
+        <PropertyRef Name="ScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

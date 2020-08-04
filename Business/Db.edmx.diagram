@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="33aff8cb92c5407995faf6c9a3667320" Name="Diagram1" >
+        <EntityTypeShape EntityType="HealthySchoolModel.AbsenceRecord" Width="1.5" PointX="11.25" PointY="45.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.AirRecord" Width="1.5" PointX="8.25" PointY="37.875" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Arrangement" Width="1.5" PointX="5.75" PointY="10.75" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ArrangementAsset" Width="1.5" PointX="8" PointY="13" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ArrangementDetail" Width="1.5" PointX="8" PointY="9.75" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Attachment" Width="1.5" PointX="13.5" PointY="41.875" />
+        <EntityTypeShape EntityType="HealthySchoolModel.City" Width="1.5" PointX="1.5" PointY="30.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ClaimRecord" Width="1.5" PointX="5.25" PointY="94.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.County" Width="1.5" PointX="1.5" PointY="34.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.DataDictionary" Width="1.5" PointX="3" PointY="39.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.DisinfectRecord" Width="1.5" PointX="8.25" PointY="45.875" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Document" Width="1.5" PointX="5.25" PointY="34.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.EnterRecord" Width="1.5" PointX="5.25" PointY="46" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ExceptionCase" Width="1.5" PointX="7.5" PointY="63.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ExceptionCaseHistory" Width="1.5" PointX="12.75" PointY="54.5" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Holiday" Width="1.5" PointX="3" PointY="22.5" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Mng_UserRole" Width="1.5" PointX="11.25" PointY="50.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Module" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ModuleItem" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ModuleItemPrivilege" Width="1.5" PointX="5.25" PointY="4.875" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ModuleRolePermission" Width="1.5" PointX="11.25" PointY="22.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.News" Width="1.5" PointX="5.25" PointY="89.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.NewsAttachment" Width="1.5" PointX="7.5" PointY="93.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Notification" Width="1.5" PointX="9.75" PointY="54.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Parent" Width="1.5" PointX="3" PointY="71.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.ParentCheckin" Width="1.5" PointX="5.25" PointY="85.875" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Privilege" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Province" Width="1.5" PointX="1.5" PointY="26.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Role" Width="1.5" PointX="9" PointY="34" />
+        <EntityTypeShape EntityType="HealthySchoolModel.RolePermission" Width="1.5" PointX="11.25" PointY="19.5" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Room" Width="1.5" PointX="6" PointY="28.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.RoomPlan" Width="1.5" PointX="8.25" PointY="20.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.RoomTeacher" Width="1.5" PointX="8.25" PointY="50.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.School" Width="1.5" PointX="0.75" PointY="37.625" />
+        <EntityTypeShape EntityType="HealthySchoolModel.StockIn" Width="1.5" PointX="5.25" PointY="78.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Student" Width="1.5" PointX="9" PointY="28.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.StudentBbtRecord" Width="1.5" PointX="5.25" PointY="57.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.StudentParent" Width="1.5" PointX="5.25" PointY="72.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Teacher" Width="1.5" PointX="3" PointY="43.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeacherBbtRecord" Width="1.5" PointX="5.25" PointY="50.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeacherLog" Width="1.5" PointX="5.25" PointY="82.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeacherRole" Width="1.5" PointX="11.25" PointY="42.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeacherTag" Width="1.5" PointX="5.25" PointY="42.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeamClassroom" Width="1.5" PointX="11.25" PointY="26.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeamNews" Width="1.5" PointX="7.5" PointY="89.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeamSchedule" Width="1.5" PointX="8.25" PointY="24.375" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeamStudent" Width="1.5" PointX="11.25" PointY="29.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TeamTeacher" Width="1.5" PointX="8.25" PointY="42.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Tips" Width="1.5" PointX="14.25" PointY="29" />
+        <EntityTypeShape EntityType="HealthySchoolModel.VerifyCode" Width="1.5" PointX="3" PointY="76" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Visitor" Width="1.5" PointX="5.25" PointY="38.25" />
+        <EntityTypeShape EntityType="HealthySchoolModel.WeiXinUser" Width="1.5" PointX="0.75" PointY="45.125" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Asset" Width="1.5" PointX="3" PointY="52.75" />
+        <AssociationConnector Association="HealthySchoolModel.RefAbsenceRecord502" />
+        <AssociationConnector Association="HealthySchoolModel.RefDataDictionary1312" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent642" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher652" />
+        <AssociationConnector Association="HealthySchoolModel.RefAirRecord372" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom302" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher322" />
+        <AssociationConnector Association="HealthySchoolModel.RefArrangement1052" />
+        <AssociationConnector Association="HealthySchoolModel.RefArrangement1062" />
+        <AssociationConnector Association="HealthySchoolModel.RefArrangement1262" />
+        <AssociationConnector Association="HealthySchoolModel.RefDisinfectRecord382" />
+        <AssociationConnector Association="HealthySchoolModel.RefCity562" />
+        <AssociationConnector Association="HealthySchoolModel.RefProvince802" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1302" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher542" />
+        <AssociationConnector Association="HealthySchoolModel.RefCounty572" />
+        <AssociationConnector Association="HealthySchoolModel.RefDataDictionary1282" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom292" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher832" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1132" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent522" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher512" />
+        <AssociationConnector Association="HealthySchoolModel.RefExceptionCase1022" />
+        <AssociationConnector Association="HealthySchoolModel.RefExceptionCase482" />
+        <AssociationConnector Association="HealthySchoolModel.RefParent682" />
+        <AssociationConnector Association="HealthySchoolModel.RefParentCheckin1212" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent672" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudentBbtRecord1192" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher662" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacherBbtRecord1202" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher822" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchool762" />
+        <AssociationConnector Association="HealthySchoolModel.RefRole882" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher942" />
+        <AssociationConnector Association="HealthySchoolModel.RefModule862" />
+        <AssociationConnector Association="HealthySchoolModel.RefModule922" />
+        <AssociationConnector Association="HealthySchoolModel.RefModuleItem842" />
+        <AssociationConnector Association="HealthySchoolModel.RefModuleItem852" />
+        <AssociationConnector Association="HealthySchoolModel.RefModuleItem872" />
+        <AssociationConnector Association="HealthySchoolModel.RefPrivilege932" />
+        <AssociationConnector Association="HealthySchoolModel.RefRole902" />
+        <AssociationConnector Association="HealthySchoolModel.RefNews1142" />
+        <AssociationConnector Association="HealthySchoolModel.RefNews1222" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1122" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1002" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1012" />
+        <AssociationConnector Association="HealthySchoolModel.RefParent182" />
+        <AssociationConnector Association="HealthySchoolModel.RefParent242" />
+        <AssociationConnector Association="HealthySchoolModel.RefParent342" />
+        <AssociationConnector Association="HealthySchoolModel.RefWeiXinUser792" />
+        <AssociationConnector Association="HealthySchoolModel.RefRole912" />
+        <AssociationConnector Association="HealthySchoolModel.RefRole962" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom1102" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom1252" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom152" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom462" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchool742" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher472" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchool582" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchool752" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1332" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent1112" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent172" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent202" />
+        <AssociationConnector Association="HealthySchoolModel.RefStudent42" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher352" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher12" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher1292" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher212" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher232" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher612" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher952" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeacher992" />
+        <AssociationConnector Association="HealthySchoolModel.RefWeiXinUser812" />
+        <AssociationConnector Association="HealthySchoolModel.RefWeiXinUser782" />
+        <EntityTypeShape EntityType="HealthySchoolModel.TinyAppSession" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Team" Width="1.5" PointX="11.25" PointY="33.25" />
+        <AssociationConnector Association="HealthySchoolModel.RefRoom112" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchool732" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam32" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam1162" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam1242" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam162" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam22" />
+        <AssociationConnector Association="HealthySchoolModel.RefTeam52" />
+        <EntityTypeShape EntityType="HealthySchoolModel.Schedule" Width="1.5" PointX="7.375" PointY="1" />
+        <AssociationConnector Association="HealthySchoolModel.RefSchedule1232" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

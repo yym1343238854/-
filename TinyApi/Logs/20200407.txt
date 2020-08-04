@@ -1,0 +1,499 @@
+﻿ 
+20200407 11:39:43  ================== WeiXinUser CheckUnionId ==================== 
+20200407 11:39:44 Exception:
+System.Data.Entity.Core.MetadataException: 指定的架构无效。错误: 
+Db.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.ThrowOnNonWarningErrors()
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, Boolean throwOnError, IDbDependencyResolver resolver)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, IDbDependencyResolver resolver, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerInvariantName, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__1()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__4()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadAndCheckItemCollection[T](Func`1 itemCollectionLoader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.<>c__DisplayClass16.<.ctor>b__f()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace, Boolean required)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace)
+   在 System.Data.Entity.Core.Objects.ObjectContext.InitializeMappingViewCacheFactory(DbContext owner)
+   在 System.Data.Entity.Core.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor, ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory, Translator translator, ColumnMapFactory columnMapFactory)
+   在 System.Data.Entity.Internal.InternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.InternalContext.Initialize()
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 Business.WeiXinUser.CheckParent(String unionId, Parent& parent) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\WeiXinUser.cs:行号 83
+
+ 
+20200407 11:39:43 =================== Parent ListTips ========================
+20200407 11:39:43 Ip          :::1
+20200407 11:39:43 ---------------------------------------------------------------
+20200407 11:39:43 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:39:43 
+20200407 11:39:44 CheckParent Error:指定的架构无效。错误: 
+Db.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。
+System.Data.Entity.Core.MetadataException: 指定的架构无效。错误: 
+Db.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.ThrowOnNonWarningErrors()
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, Boolean throwOnError, IDbDependencyResolver resolver)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, IDbDependencyResolver resolver, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerInvariantName, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__1()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__4()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadAndCheckItemCollection[T](Func`1 itemCollectionLoader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.<>c__DisplayClass16.<.ctor>b__f()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace, Boolean required)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace)
+   在 System.Data.Entity.Core.Objects.ObjectContext.InitializeMappingViewCacheFactory(DbContext owner)
+   在 System.Data.Entity.Core.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor, ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory, Translator translator, ColumnMapFactory columnMapFactory)
+   在 System.Data.Entity.Internal.InternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.InternalContext.Initialize()
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 Business.WeiXinUser.CheckParent(String unionId, Parent& parent) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\WeiXinUser.cs:行号 83
+
+20200407 11:39:44 Results:
+{
+  "Data": {
+    "TabCount": 0,
+    "RoomTypes": []
+  },
+  "Success": false,
+  "ErrorMessage": "指定的架构无效。错误: \r\nDb.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。\r\nSystem.Data.Entity.Core.MetadataException: 指定的架构无效。错误: \r\nDb.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。\r\n   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.ThrowOnNonWarningErrors()\r\n   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)\r\n   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, Boolean throwOnError, IDbDependencyResolver resolver)\r\n   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, IDbDependencyResolver resolver, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerInvariantName, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)\r\n   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__1()\r\n   在 System.Lazy`1.CreateValue()\r\n   在 System.Lazy`1.LazyInitValue()\r\n   在 System.Lazy`1.get_Value()\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__4()\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadAndCheckItemCollection[T](Func`1 itemCollectionLoader)\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.<>c__DisplayClass16.<.ctor>b__f()\r\n   在 System.Lazy`1.CreateValue()\r\n   在 System.Lazy`1.LazyInitValue()\r\n   在 System.Lazy`1.get_Value()\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace, Boolean required)\r\n   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.InitializeMappingViewCacheFactory(DbContext owner)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor, ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory, Translator translator, ColumnMapFactory columnMapFactory)\r\n   在 System.Data.Entity.Internal.InternalConnection.CreateObjectContextFromConnectionModel()\r\n   在 System.Data.Entity.Internal.LazyInternalConnection.CreateObjectContextFromConnectionModel()\r\n   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()\r\n   在 System.Data.Entity.Internal.InternalContext.Initialize()\r\n   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   在 System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   在 Business.WeiXinUser.CheckParent(String unionId, Parent& parent) 位置 F:\\dev\\学校防疫管理系统\\Code\\SchoolHealth\\Business\\Business\\WeiXinUser.cs:行号 83\r\n",
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:40:27  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:40:27 =================== Parent ListTips ========================
+20200407 11:40:27 Ip          :::1
+20200407 11:40:27 ---------------------------------------------------------------
+20200407 11:40:27 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:40:27 
+20200407 11:41:17 Exception:
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 TinyApi.Controllers.ParentController.<>c.<ListTips>b__10_0(Tips x) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\Controllers\ParentController.cs:行号 1366
+   在 System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 TinyApi.Controllers.ParentController.ListTips(InputTeamIdModel model) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\Controllers\ParentController.cs:行号 1367
+20200407 11:41:17 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": []
+  },
+  "Success": false,
+  "ErrorMessage": "未将对象引用设置到对象的实例。",
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:41:28  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:42:24  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:42:24 =================== Parent ListTips ========================
+20200407 11:42:24 Ip          :::1
+20200407 11:42:24 ---------------------------------------------------------------
+20200407 11:42:24 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:42:24 
+20200407 11:42:28 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": [
+      {
+        "Type": 1,
+        "TypeName": "教室",
+        "Rooms": []
+      },
+      {
+        "Type": 2,
+        "TypeName": "食堂",
+        "Rooms": []
+      },
+      {
+        "Type": 3,
+        "TypeName": "其他场所",
+        "Rooms": []
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:44:03  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:44:03 =================== Parent ListTips ========================
+20200407 11:44:03 Ip          :::1
+20200407 11:44:03 ---------------------------------------------------------------
+20200407 11:44:03 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:44:03 
+20200407 11:44:05 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": [
+      {
+        "TabId": 1,
+        "TabName": "教室",
+        "Rooms": []
+      },
+      {
+        "TabId": 2,
+        "TabName": "食堂",
+        "Rooms": []
+      },
+      {
+        "TabId": 3,
+        "TabName": "其他场所",
+        "Rooms": []
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:58:56  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:58:56 =================== Parent ListTips ========================
+20200407 11:58:56 Ip          :::1
+20200407 11:58:56 ---------------------------------------------------------------
+20200407 11:58:56 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:58:56 
+20200407 11:58:58 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": [
+      {
+        "TabId": 1,
+        "TabName": "教室",
+        "Rooms": [
+          {
+            "RoomId": "385fbe8a-c9fb-4eff-9af6-c07132b3eea2",
+            "Name": "101教室",
+            "Tips": [
+              {
+                "TipsId": "3c8d3c04-0c0f-4e9c-9ac4-9dfe9eb65e82",
+                "TimeStr": "11:57",
+                "Content": "第一次消毒",
+                "FontColor": "green"
+              },
+              {
+                "TipsId": "85d4cd1e-53b9-4246-8415-4ab58a3d5698",
+                "TimeStr": "11:56",
+                "Content": "第一次通风",
+                "FontColor": "green"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "TabId": 2,
+        "TabName": "食堂",
+        "Rooms": []
+      },
+      {
+        "TabId": 3,
+        "TabName": "其他场所",
+        "Rooms": []
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:59:45  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 11:59:45 =================== Parent ListTips ========================
+20200407 11:59:45 Ip          :::1
+20200407 11:59:45 ---------------------------------------------------------------
+20200407 11:59:45 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 11:59:45 
+20200407 11:59:46 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": [
+      {
+        "TabId": 1,
+        "TabName": "教室",
+        "Rooms": [
+          {
+            "RoomId": "385fbe8a-c9fb-4eff-9af6-c07132b3eea2",
+            "Name": "101教室",
+            "Tips": [
+              {
+                "TipsId": "3c8d3c04-0c0f-4e9c-9ac4-9dfe9eb65e82",
+                "TimeStr": "11:57",
+                "Content": "第一次消毒",
+                "FontColor": "green"
+              },
+              {
+                "TipsId": "85d4cd1e-53b9-4246-8415-4ab58a3d5698",
+                "TimeStr": "11:56",
+                "Content": "第一次通风",
+                "FontColor": "green"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "TabId": 2,
+        "TabName": "食堂",
+        "Rooms": []
+      },
+      {
+        "TabId": 3,
+        "TabName": "其他场所",
+        "Rooms": []
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 11:59:58  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 12:03:10  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 12:03:10 =================== Parent ListTips ========================
+20200407 12:03:10 Ip          :::1
+20200407 12:03:10 ---------------------------------------------------------------
+20200407 12:03:10 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200407 12:03:10 
+20200407 12:03:12 Results:
+{
+  "Data": {
+    "TabCount": 3,
+    "RoomTypes": [
+      {
+        "TabId": 1,
+        "TabName": "教室",
+        "Rooms": [
+          {
+            "RoomId": "385fbe8a-c9fb-4eff-9af6-c07132b3eea2",
+            "Name": "101教室",
+            "Tips": [
+              {
+                "TipsId": "3c8d3c04-0c0f-4e9c-9ac4-9dfe9eb65e82",
+                "TimeStr": "11:57",
+                "Content": "第一次消毒",
+                "FontColor": "green"
+              },
+              {
+                "TipsId": "85d4cd1e-53b9-4246-8415-4ab58a3d5698",
+                "TimeStr": "11:56",
+                "Content": "第一次通风",
+                "FontColor": "green"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "TabId": 2,
+        "TabName": "食堂",
+        "Rooms": []
+      },
+      {
+        "TabId": 3,
+        "TabName": "其他场所",
+        "Rooms": [
+          {
+            "RoomId": "8fe3c67b-a62e-4f51-95d5-8115e7c17a9c",
+            "Name": "体育馆",
+            "Tips": [
+              {
+                "TipsId": "6ebaad69-134f-4674-ba14-1d2b86a212f7",
+                "TimeStr": "11:58",
+                "Content": "第一次消毒",
+                "FontColor": "green"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 13:31:17 =================== Member PersonalInfo ========================
+20200407 13:31:17 UnionId      :ohxsKwPTVSwNHXYpOB43Xcv3jER4
+20200407 13:31:17 Sign         :string
+20200407 13:31:17 Ip          :::1
+20200407 13:31:17 ---------------------------------------------------------------
+20200407 13:31:18 Results:
+{"Data":{"StudentId":"00000000-0000-0000-0000-000000000000","Name":"帅爸","Mobile":"13958066345","HeadImage":"https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLDFCicuMwFRGySLiaePDPjWm4AtxQZZf46rV1icp4JZFCqjH088wiaeBt2j3J05rEGibCpzFeDQ3aRRT1A/132","Teachers":[{"TeamName":"一年级(1)班","TeacherId":"3e9c4fbd-97cd-4a5a-b02c-fb5a8deb667a","TeamId":"d747a208-f73d-4978-9582-854bd04c322b"}],"Parents":[{"StudentName":"胡帅","ParentId":"0fb5e729-532c-4342-b1e3-6279816584c3","StudentId":"7e0bd32e-4cd4-4d75-8ed5-f4e086e74224"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200407 13:49:09 =================== Parent PersonalInfo ========================
+20200407 13:49:09 UnionId      :ohxsKwPTVSwNHXYpOB43Xcv3jER4
+20200407 13:49:09 Sign         :string
+20200407 13:49:09 Ip          :::1
+20200407 13:49:09 ---------------------------------------------------------------
+20200407 13:49:10 Results:
+{"Data":{"Name":"帅爸","Mobile":"13958066345","HeadImage":"https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLDFCicuMwFRGySLiaePDPjWm4AtxQZZf46rV1icp4JZFCqjH088wiaeBt2j3J05rEGibCpzFeDQ3aRRT1A/132","Teachers":[{"TeamName":"一年级(1)班","AvatarUrl":"","TeacherId":"3e9c4fbd-97cd-4a5a-b02c-fb5a8deb667a","TeamId":"d747a208-f73d-4978-9582-854bd04c322b"}],"Parents":[{"StudentName":"胡帅","AvatarUrl":"/Userfiles/Students/202004/20200403/d747a208-f73d-4978-9582-854bd04c322b/244860a8f32446b3b23a16695da9fb24.png?r=038B2Y7Q","ParentId":"0fb5e729-532c-4342-b1e3-6279816584c3","StudentId":"7e0bd32e-4cd4-4d75-8ed5-f4e086e74224"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200407 13:49:40 =================== Parent PersonalInfo ========================
+20200407 13:49:40 UnionId      :ohxsKwPTVSwNHXYpOB43Xcv3jER4
+20200407 13:49:40 Sign         :string
+20200407 13:49:40 Ip          :::1
+20200407 13:49:40 ---------------------------------------------------------------
+20200407 13:50:12 Results:
+{"Data":{"Name":"帅爸","Mobile":"13958066345","HeadImage":"https://wx.qlogo.cn/mmopen/vi_32/ajNVdqHZLLDFCicuMwFRGySLiaePDPjWm4AtxQZZf46rV1icp4JZFCqjH088wiaeBt2j3J05rEGibCpzFeDQ3aRRT1A/132","Teachers":[{"TeamName":"一年级(1)班","AvatarUrl":"","TeacherId":"3e9c4fbd-97cd-4a5a-b02c-fb5a8deb667a","TeamId":"d747a208-f73d-4978-9582-854bd04c322b"}],"Parents":[{"StudentName":"胡帅","AvatarUrl":"https://school.yuelvsu.com/tinyapi//Userfiles/Students/202004/20200403/d747a208-f73d-4978-9582-854bd04c322b/244860a8f32446b3b23a16695da9fb24.png?r=038B2Y7Q","ParentId":"0fb5e729-532c-4342-b1e3-6279816584c3","StudentId":"7e0bd32e-4cd4-4d75-8ed5-f4e086e74224"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200407 14:38:17  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200407 14:38:17 =================== Parent MemberManagement ========================
+20200407 14:38:17 UnionId      :ohxsKwJYe-GyRPonbenm1og72Pfs
+20200407 14:38:17 Sign         :string
+20200407 14:38:17 Ip          :127.0.0.1
+20200407 14:38:17 ---------------------------------------------------------------
+20200407 14:38:17 Input Data:
+{
+  "StudentId": "622d81b0-7027-48fb-9190-f47e56294c0b",
+  "TeamId": null,
+  "UnionId": "ohxsKwJYe-GyRPonbenm1og72Pfs",
+  "Sign": "string"
+}
+20200407 14:38:18 Results:
+{
+  "Data": {
+    "Team": {
+      "SchoolName": "安吉路实验学校",
+      "TeamName": "一年级(1)班",
+      "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+      "RoomName": "101教室",
+      "StudentNum": 6,
+      "ParentNum": 6,
+      "TeacherNum": 0,
+      "Student": {
+        "AvatarUrl": "https://school.yuelvsu.com/tinyapi//Userfiles/Students/202004/20200403/d747a208-f73d-4978-9582-854bd04c322b/c6e40ab7ddd741e6811efb91004d9fec.jpg?r=136N93CH",
+        "Name": "张岩",
+        "IdNo": "330102201405280569",
+        "No": 25,
+        "StudentId": "622d81b0-7027-48fb-9190-f47e56294c0b"
+      }
+    },
+    "TodayString": "2020年04月07日 星期二",
+    "FamilyMembers": [
+      {
+        "ParentId": "5bc2c16e-2f57-4780-9e32-9e18fc5827e8",
+        "ParentName": "张兰",
+        "HasBindWeiXin": true,
+        "HeadImage": "https://wx.qlogo.cn/mmopen/vi_32/puPojQY84GurQQmSRYQzIdAkYEhr5GAzVBcHTlUicPZ0e6D8JWticV4oicJ0AZPh2xvTIP5P34jbc1mCicNfIqDy7g/132",
+        "Mobile": "13906532287"
+      }
+    ]
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200407 16:10:02 =================== Member Login ========================
+20200407 16:10:02 JsCode      :021YL3hH1QSdv20rH3fH18UshH1YL3hN
+20200407 16:10:02 Ip          :127.0.0.1
+20200407 16:10:02 ---------------------------------------------------------------
+20200407 16:10:02 Input Data:
+{
+  "JsCode": "021YL3hH1QSdv20rH3fH18UshH1YL3hN"
+}
+20200407 16:10:02 wx329a6cc8a7f2267c 78f1baa0def6224cb8f0ceeab40ba44a
+20200407 16:10:02 Exception:
+微信 GET 请求发生错误！错误代码：40163，说明：code been used, hints: [ req_id: EHdBP34ce-UP1.nA ]
+20200407 16:10:02 Results:
+{"Data":{"UnionId":null,"OpenId":null,"Avatar":null,"NickName":null,"QrcodeUrl":null,"Teachers":null,"Parents":null},"Success":false,"ErrorMessage":"微信 GET 请求发生错误！错误代码：40163，说明：code been used, hints: [ req_id: EHdBP34ce-UP1.nA ]","ErrorNumber":0}
+

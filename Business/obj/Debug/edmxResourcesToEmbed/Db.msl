@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HealthySchoolModelStoreContainer" CdmEntityContainer="HealthySchoolEntities">
+    <EntitySetMapping Name="AbsenceRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.AbsenceRecord">
+        <MappingFragment StoreEntitySet="AbsenceRecord">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="PeopleType" ColumnName="PeopleType" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EndDay" ColumnName="EndDay" />
+          <ScalarProperty Name="SpecDay" ColumnName="SpecDay" />
+          <ScalarProperty Name="AbsenceRecordId" ColumnName="AbsenceRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AirRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.AirRecord">
+        <MappingFragment StoreEntitySet="AirRecord">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AirRecordId" ColumnName="AirRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arrangement">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Arrangement">
+        <MappingFragment StoreEntitySet="Arrangement">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="WeekDays" ColumnName="WeekDays" />
+          <ScalarProperty Name="FrequenceType" ColumnName="FrequenceType" />
+          <ScalarProperty Name="RoomNum" ColumnName="RoomNum" />
+          <ScalarProperty Name="Frequence" ColumnName="Frequence" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArrangementAsset">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ArrangementAsset">
+        <MappingFragment StoreEntitySet="ArrangementAsset">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArrangementDetail">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ArrangementDetail">
+        <MappingFragment StoreEntitySet="ArrangementDetail">
+          <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArrangementDetailId" ColumnName="ArrangementDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachment">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Attachment">
+        <MappingFragment StoreEntitySet="Attachment">
+          <ScalarProperty Name="DisinfectRecordId" ColumnName="DisinfectRecordId" />
+          <ScalarProperty Name="AirRecordId" ColumnName="AirRecordId" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="OriginalName" ColumnName="OriginalName" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AttachmentId" ColumnName="AttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="HealthySchoolModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClaimRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ClaimRecord">
+        <MappingFragment StoreEntitySet="ClaimRecord">
+          <ScalarProperty Name="Keeper" ColumnName="Keeper" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClaimRecord1" ColumnName="ClaimRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="County">
+      <EntityTypeMapping TypeName="HealthySchoolModel.County">
+        <MappingFragment StoreEntitySet="County">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountyId" ColumnName="CountyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataDictionary">
+      <EntityTypeMapping TypeName="HealthySchoolModel.DataDictionary">
+        <MappingFragment StoreEntitySet="DataDictionary">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Catalogs" ColumnName="Catalogs" />
+          <ScalarProperty Name="DataDictionaryId" ColumnName="DataDictionaryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DisinfectRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.DisinfectRecord">
+        <MappingFragment StoreEntitySet="DisinfectRecord">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AssetsComment" ColumnName="AssetsComment" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="DisinfectRecordId" ColumnName="DisinfectRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Document">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Document">
+        <MappingFragment StoreEntitySet="Document">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="Views" ColumnName="Views" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnterRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.EnterRecord">
+        <MappingFragment StoreEntitySet="EnterRecord">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="PeopleType" ColumnName="PeopleType" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EnterRecordId" ColumnName="EnterRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExceptionCase">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ExceptionCase">
+        <MappingFragment StoreEntitySet="ExceptionCase">
+          <ScalarProperty Name="ParentCheckinId" ColumnName="ParentCheckinId" />
+          <ScalarProperty Name="TeacherBbtRecordId" ColumnName="TeacherBbtRecordId" />
+          <ScalarProperty Name="StudentBbtRecordId" ColumnName="StudentBbtRecordId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="AbsenceRecordId" ColumnName="AbsenceRecordId" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PeopleType" ColumnName="PeopleType" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ExceptionCaseId" ColumnName="ExceptionCaseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExceptionCaseHistory">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ExceptionCaseHistory">
+        <MappingFragment StoreEntitySet="ExceptionCaseHistory">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ExceptionCaseId" ColumnName="ExceptionCaseId" />
+          <ScalarProperty Name="HealthyStatus" ColumnName="HealthyStatus" />
+          <ScalarProperty Name="ExceptionCaseHistoryId" ColumnName="ExceptionCaseHistoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holiday">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Holiday">
+        <MappingFragment StoreEntitySet="Holiday">
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="SpecDay" ColumnName="SpecDay" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="HolidayId" ColumnName="HolidayId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mng_UserRole">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Mng_UserRole">
+        <MappingFragment StoreEntitySet="Mng_UserRole">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Module">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Module">
+        <MappingFragment StoreEntitySet="Module">
+          <ScalarProperty Name="CheckinTime" ColumnName="CheckinTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="OrderFlag" ColumnName="OrderFlag" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuleItem">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ModuleItem">
+        <MappingFragment StoreEntitySet="ModuleItem">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="OrderFlag" ColumnName="OrderFlag" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="IsMenuItem" ColumnName="IsMenuItem" />
+          <ScalarProperty Name="MenuItemPicture" ColumnName="MenuItemPicture" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ModuleItemId" ColumnName="ModuleItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuleItemPrivilege">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ModuleItemPrivilege">
+        <MappingFragment StoreEntitySet="ModuleItemPrivilege">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+          <ScalarProperty Name="ModuleItemId" ColumnName="ModuleItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModuleRolePermission">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ModuleRolePermission">
+        <MappingFragment StoreEntitySet="ModuleRolePermission">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="HealthySchoolModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="Hits" ColumnName="Hits" />
+          <ScalarProperty Name="PublishTime" ColumnName="PublishTime" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CoverUrl" ColumnName="CoverUrl" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="PeopleType" ColumnName="PeopleType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RangeType" ColumnName="RangeType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsAttachment">
+      <EntityTypeMapping TypeName="HealthySchoolModel.NewsAttachment">
+        <MappingFragment StoreEntitySet="NewsAttachment">
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+          <ScalarProperty Name="Hits" ColumnName="Hits" />
+          <ScalarProperty Name="Ext" ColumnName="Ext" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="OriginalName" ColumnName="OriginalName" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+          <ScalarProperty Name="NewsAttachmentId" ColumnName="NewsAttachmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notification">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="ExceptionCaseId" ColumnName="ExceptionCaseId" />
+          <ScalarProperty Name="Handler" ColumnName="Handler" />
+          <ScalarProperty Name="InitiatorId" ColumnName="InitiatorId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NotificationId" ColumnName="NotificationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parent">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Parent">
+        <MappingFragment StoreEntitySet="Parent">
+          <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="LastAccessTime" ColumnName="LastAccessTime" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="IdNo" ColumnName="IdNo" />
+          <ScalarProperty Name="HealthyStatus" ColumnName="HealthyStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParentCheckin">
+      <EntityTypeMapping TypeName="HealthySchoolModel.ParentCheckin">
+        <MappingFragment StoreEntitySet="ParentCheckin">
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          <ScalarProperty Name="SpecDay" ColumnName="SpecDay" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentCheckinId" ColumnName="ParentCheckinId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Privilege">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Privilege">
+        <MappingFragment StoreEntitySet="Privilege">
+          <ScalarProperty Name="CheckinTime" ColumnName="CheckinTime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Province">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RolePermission">
+      <EntityTypeMapping TypeName="HealthySchoolModel.RolePermission">
+        <MappingFragment StoreEntitySet="RolePermission">
+          <ScalarProperty Name="EffectiveCode" ColumnName="EffectiveCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ModuleItemId" ColumnName="ModuleItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="MeasureType" ColumnName="MeasureType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomPlan">
+      <EntityTypeMapping TypeName="HealthySchoolModel.RoomPlan">
+        <MappingFragment StoreEntitySet="RoomPlan">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomTeacher">
+      <EntityTypeMapping TypeName="HealthySchoolModel.RoomTeacher">
+        <MappingFragment StoreEntitySet="RoomTeacher">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="School">
+      <EntityTypeMapping TypeName="HealthySchoolModel.School">
+        <MappingFragment StoreEntitySet="School">
+          <ScalarProperty Name="NeedClaimModule" ColumnName="NeedClaimModule" />
+          <ScalarProperty Name="EnterMode" ColumnName="EnterMode" />
+          <ScalarProperty Name="NeedTemperaturePhoto" ColumnName="NeedTemperaturePhoto" />
+          <ScalarProperty Name="NeedFamilyTest" ColumnName="NeedFamilyTest" />
+          <ScalarProperty Name="NeedAirPhoto" ColumnName="NeedAirPhoto" />
+          <ScalarProperty Name="NeedDisInfectPhoto" ColumnName="NeedDisInfectPhoto" />
+          <ScalarProperty Name="SubDomain" ColumnName="SubDomain" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CountyId" ColumnName="CountyId" />
+          <ScalarProperty Name="ParentNum" ColumnName="ParentNum" />
+          <ScalarProperty Name="RoomNum" ColumnName="RoomNum" />
+          <ScalarProperty Name="StudentNum" ColumnName="StudentNum" />
+          <ScalarProperty Name="TeacherNum" ColumnName="TeacherNum" />
+          <ScalarProperty Name="TeamNum" ColumnName="TeamNum" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockIn">
+      <EntityTypeMapping TypeName="HealthySchoolModel.StockIn">
+        <MappingFragment StoreEntitySet="StockIn">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StockInId" ColumnName="StockInId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="LastAccessTime" ColumnName="LastAccessTime" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="IdNo" ColumnName="IdNo" />
+          <ScalarProperty Name="HealthyStatus" ColumnName="HealthyStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AvatarUrl" ColumnName="AvatarUrl" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentBbtRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.StudentBbtRecord">
+        <MappingFragment StoreEntitySet="StudentBbtRecord">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="PhotoUrl" ColumnName="PhotoUrl" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="SpecDay" ColumnName="SpecDay" />
+          <ScalarProperty Name="StudentBbtRecordId" ColumnName="StudentBbtRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentParent">
+      <EntityTypeMapping TypeName="HealthySchoolModel.StudentParent">
+        <MappingFragment StoreEntitySet="StudentParent">
+          <ScalarProperty Name="Relationship" ColumnName="Relationship" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="AvatarUrl" ColumnName="AvatarUrl" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="LastAccessTime" ColumnName="LastAccessTime" />
+          <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+          <ScalarProperty Name="IdNo" ColumnName="IdNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="HealthyStatus" ColumnName="HealthyStatus" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="IsSchoolAdmin" ColumnName="IsSchoolAdmin" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherBbtRecord">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeacherBbtRecord">
+        <MappingFragment StoreEntitySet="TeacherBbtRecord">
+          <ScalarProperty Name="Measurer" ColumnName="Measurer" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SpecDay" ColumnName="SpecDay" />
+          <ScalarProperty Name="TeacherBbtRecordId" ColumnName="TeacherBbtRecordId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherLog">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeacherLog">
+        <MappingFragment StoreEntitySet="TeacherLog">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="TeacherLogId" ColumnName="TeacherLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherRole">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeacherRole">
+        <MappingFragment StoreEntitySet="TeacherRole">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherTag">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeacherTag">
+        <MappingFragment StoreEntitySet="TeacherTag">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="DataDictionaryId" ColumnName="DataDictionaryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamClassroom">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeamClassroom">
+        <MappingFragment StoreEntitySet="TeamClassroom">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamNews">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeamNews">
+        <MappingFragment StoreEntitySet="TeamNews">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamSchedule">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeamSchedule">
+        <MappingFragment StoreEntitySet="TeamSchedule">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamStudent">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeamStudent">
+        <MappingFragment StoreEntitySet="TeamStudent">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamTeacher">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TeamTeacher">
+        <MappingFragment StoreEntitySet="TeamTeacher">
+          <ScalarProperty Name="IsHead" ColumnName="IsHead" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tips">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Tips">
+        <MappingFragment StoreEntitySet="Tips">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="ActionTime" ColumnName="ActionTime" />
+          <ScalarProperty Name="FontColor" ColumnName="FontColor" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TipsId" ColumnName="TipsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VerifyCode">
+      <EntityTypeMapping TypeName="HealthySchoolModel.VerifyCode">
+        <MappingFragment StoreEntitySet="VerifyCode">
+          <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+          <ScalarProperty Name="VerifyTime" ColumnName="VerifyTime" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VerifyCodeId" ColumnName="VerifyCodeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visitor">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Visitor">
+        <MappingFragment StoreEntitySet="Visitor">
+          <ScalarProperty Name="Recorder" ColumnName="Recorder" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdNo" ColumnName="IdNo" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeiXinUser">
+      <EntityTypeMapping TypeName="HealthySchoolModel.WeiXinUser">
+        <MappingFragment StoreEntitySet="WeiXinUser">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Subscribe" ColumnName="Subscribe" />
+          <ScalarProperty Name="LastAccessTime" ColumnName="LastAccessTime" />
+          <ScalarProperty Name="AccessTimes" ColumnName="AccessTimes" />
+          <ScalarProperty Name="ComeFrom" ColumnName="ComeFrom" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="TinyAppOpenId" ColumnName="TinyAppOpenId" />
+          <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+          <ScalarProperty Name="HeadImage" ColumnName="HeadImage" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asset">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Asset">
+        <MappingFragment StoreEntitySet="Asset">
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Num" ColumnName="Num" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinyAppSession">
+      <EntityTypeMapping TypeName="HealthySchoolModel.TinyAppSession">
+        <MappingFragment StoreEntitySet="TinyAppSession">
+          <ScalarProperty Name="LastActiveTime" ColumnName="LastActiveTime" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SessionKey" ColumnName="SessionKey" />
+          <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Team">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="GradeYear" ColumnName="GradeYear" />
+          <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="ParentNum" ColumnName="ParentNum" />
+          <ScalarProperty Name="TeacherNum" ColumnName="TeacherNum" />
+          <ScalarProperty Name="StudentNum" ColumnName="StudentNum" />
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="ColorStatus" ColumnName="ColorStatus" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="NickName" ColumnName="NickName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule">
+      <EntityTypeMapping TypeName="HealthySchoolModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="Checkintime" ColumnName="Checkintime" />
+          <ScalarProperty Name="TeamNum" ColumnName="TeamNum" />
+          <ScalarProperty Name="EndHhmm" ColumnName="EndHhmm" />
+          <ScalarProperty Name="StartHhmm" ColumnName="StartHhmm" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

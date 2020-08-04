@@ -1,0 +1,319 @@
+﻿ 
+20200403 11:16:27  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 11:16:27 =============== Parent UploadBbt ===============
+20200403 11:16:27 Ip    :::1
+20200403 11:16:27 FormData:1
+20200403 11:16:27 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+
+20200403 11:16:27 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+20200403 11:16:27 IsJsonData:true
+20200403 11:16:27 Params:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "Temperature": 36.5,
+  "Type": 3,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200403 11:16:27 FileData:1
+20200403 11:16:27 FileSize:476683
+20200403 11:16:27 OldName:"0387f87587144d5a8012060c818ff82.jpg"
+20200403 11:16:27 FileInfo:Keyfile Uploaded file: 0387f87587144d5a8012060c818ff82.jpg 476683 bytes
+20200403 11:16:27 Folder:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0
+20200403 11:16:27 File:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0\f34006c701804b7d8d39964635e744fa.jpg
+20200403 11:16:27 Url = https://school.yuelvsu.com/tinyapi//Userfiles/StudentBbt/202004/20200403/7f1411aa-8312-40c7-ac2a-c5e4338856f0/f34006c701804b7d8d39964635e744fa.jpg?r=XJTDFQZK
+20200403 11:16:27 Save Success.
+20200403 11:16:27 Results:
+{
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200403 11:18:19  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 11:18:19 =============== Parent UploadBbt ===============
+20200403 11:18:19 Ip    :::1
+20200403 11:18:19 FormData:1
+20200403 11:18:19 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+
+20200403 11:18:19 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+20200403 11:18:19 IsJsonData:true
+20200403 11:18:19 Params:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "Temperature": 36.5,
+  "Type": 3,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200403 11:18:19 FileData:1
+20200403 11:18:19 FileSize:476683
+20200403 11:18:19 OldName:"0387f87587144d5a8012060c818ff82.jpg"
+20200403 11:18:19 FileInfo:Keyfile Uploaded file: 0387f87587144d5a8012060c818ff82.jpg 476683 bytes
+20200403 11:18:19 Folder:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0
+20200403 11:18:19 File:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0\96e75e378b964c06bc4878cb11eda179.jpg
+20200403 11:18:19 Url = https://school.yuelvsu.com/tinyapi//Userfiles/StudentBbt/202004/20200403/7f1411aa-8312-40c7-ac2a-c5e4338856f0/96e75e378b964c06bc4878cb11eda179.jpg?r=2G0KPZ1N
+20200403 11:18:19 Save Success.
+20200403 11:18:19 Results:
+{
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200403 11:21:08  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 11:21:08 =============== Parent UploadBbt ===============
+20200403 11:21:08 Ip    :::1
+20200403 11:21:08 FormData:1
+20200403 11:21:08 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+
+20200403 11:21:08 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","StudentId":"7F1411AA-8312-40C7-AC2A-C5E4338856F0","Temperature":"36.5","Type":"3"}
+20200403 11:21:08 IsJsonData:true
+20200403 11:21:08 Params:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "Temperature": 36.5,
+  "Type": 3,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200403 11:21:09 FileData:1
+20200403 11:21:09 FileSize:476683
+20200403 11:21:09 OldName:"0387f87587144d5a8012060c818ff82.jpg"
+20200403 11:21:09 FileInfo:Keyfile Uploaded file: 0387f87587144d5a8012060c818ff82.jpg 476683 bytes
+20200403 11:21:09 Folder:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0
+20200403 11:21:09 File:F:\dev\学校防疫管理系统\Code\SchoolHealth\TinyApi\UserFiles\StudentBbt\202004\20200403\7f1411aa-8312-40c7-ac2a-c5e4338856f0\e2ea76fa69f24f768f73b857bb745ade.jpg
+20200403 11:21:09 Url = https://school.yuelvsu.com/tinyapi//Userfiles/StudentBbt/202004/20200403/7f1411aa-8312-40c7-ac2a-c5e4338856f0/e2ea76fa69f24f768f73b857bb745ade.jpg?r=MU13ODST
+20200403 11:21:15 Save Success.
+20200403 11:21:15 Results:
+{
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200403 15:59:51  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 15:59:44 =================== Parent ListBbtCalendar ========================
+20200403 15:59:45 Ip          :::1
+20200403 15:59:46 ---------------------------------------------------------------
+20200403 15:59:48 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecMonth": "2020-04-03T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 16:01:01 Success.
+20200403 16:01:01 Results:
+{"Data":{"SpecDays":[{"DateStr":"2020-04-02","Status":1,"MeasureNum":1},{"DateStr":"2020-04-03","Status":1,"MeasureNum":1}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 16:28:56  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 16:28:56 =================== Parent Home ========================
+20200403 16:28:56 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200403 16:28:56 Sign         :string
+20200403 16:28:56 Ip          :::1
+20200403 16:28:56 ---------------------------------------------------------------
+20200403 16:28:56 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 16:28:57 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":false,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":5,"ParentNum":4,"TeacherNum":0,"Student":{"AvatarUrl":"https://school.yuelvsu.com/tinyapi//Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":3,"Temperature":36.5,"Status":false,"MeasureTimeStr":"11:21"}],"tips":[{"TimeStr":"18:32","Content":"添加学生小周","FontColor":"#788180"},{"TimeStr":"18:50","Content":"测量体温 30.5","FontColor":"#788180"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:08:55  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:08:55 =================== Parent ListBbtRecords ========================
+20200403 17:08:55 Ip          :::1
+20200403 17:08:55 ---------------------------------------------------------------
+20200403 17:08:55 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:08:55 Success.
+20200403 17:08:55 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:09:05  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:09:05 =================== Parent ListBbtRecords ========================
+20200403 17:09:05 Ip          :::1
+20200403 17:09:05 ---------------------------------------------------------------
+20200403 17:09:05 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:09:05 Success.
+20200403 17:09:05 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:09:06  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:09:06 =================== Parent ListBbtRecords ========================
+20200403 17:09:06 Ip          :::1
+20200403 17:09:06 ---------------------------------------------------------------
+20200403 17:09:06 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:09:06 Success.
+20200403 17:09:06 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:12:10  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:12:07 =================== Parent ListBbtRecords ========================
+20200403 17:12:07 Ip          :::1
+20200403 17:12:08 ---------------------------------------------------------------
+20200403 17:12:08 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:12:43 Success.
+20200403 17:12:43 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:13:04  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:13:04 =================== Parent ListBbtRecords ========================
+20200403 17:13:04 Ip          :::1
+20200403 17:13:04 ---------------------------------------------------------------
+20200403 17:13:04 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:13:04 Success.
+20200403 17:13:04 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:14:00  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:14:05  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:14:05 =================== Parent ListBbtRecords ========================
+20200403 17:14:05 Ip          :::1
+20200403 17:14:05 ---------------------------------------------------------------
+20200403 17:14:05 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "2020-04-02T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:14:05 Success.
+20200403 17:14:05 Results:
+{"Data":{"BbtRecords":[{"Type":0,"Temperature":36.5,"Status":false,"MeasureTimeStr":"08:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:13:15 =================== Parent ListBbtRecords ========================
+20200403 17:13:16 Ip          :::1
+20200403 17:13:16 ---------------------------------------------------------------
+20200403 17:13:17 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "0001-01-01T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:14:05 Success.
+20200403 17:14:05 Results:
+{"Data":{"BbtRecords":[]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:14:51  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:14:51 =================== Parent ListBbtRecords ========================
+20200403 17:14:51 Ip          :::1
+20200403 17:14:51 ---------------------------------------------------------------
+20200403 17:14:51 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "2020-04-02T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:14:51 Success.
+20200403 17:14:51 Results:
+{"Data":{"BbtRecords":[{"Type":0,"Temperature":36.5,"Status":true,"MeasureTimeStr":"08:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:15:15  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:15:15 =================== Parent ListBbtRecords ========================
+20200403 17:15:15 Ip          :::1
+20200403 17:15:15 ---------------------------------------------------------------
+20200403 17:15:15 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "2020-04-02T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:15:15 Success.
+20200403 17:15:15 Results:
+{"Data":{"BbtRecords":[{"Type":3,"Temperature":36.5,"Status":true,"MeasureTimeStr":"08:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200403 17:15:24  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200403 17:15:24 =================== Parent ListBbtRecords ========================
+20200403 17:15:24 Ip          :::1
+20200403 17:15:24 ---------------------------------------------------------------
+20200403 17:15:24 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "SpecDay": "2020-04-03T00:00:00",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200403 17:15:24 Success.
+20200403 17:15:24 Results:
+{"Data":{"BbtRecords":[{"Type":3,"Temperature":36.5,"Status":true,"MeasureTimeStr":"11:15"},{"Type":3,"Temperature":36.6,"Status":true,"MeasureTimeStr":"16:12"},{"Type":3,"Temperature":36.6,"Status":true,"MeasureTimeStr":"16:16"},{"Type":3,"Temperature":36.6,"Status":true,"MeasureTimeStr":"16:09"},{"Type":3,"Temperature":36.6,"Status":true,"MeasureTimeStr":"16:44"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+

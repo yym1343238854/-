@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.CO2NET.Cache.Redis.RedLock</name>
+    </assembly>
+    <members>
+        <member name="F:Redlock.CSharp.Redlock.UnlockScript">
+            <summary>
+            String containing the Lua unlock script.
+            </summary>
+        </member>
+        <member name="M:Redlock.CSharp.Redlock.LockAsync(StackExchange.Redis.RedisKey,System.TimeSpan)">
+            <summary>
+            
+            </summary>
+            <param name="resource"></param>
+            <param name="ttl"></param>
+            <returns>bool：successfull，Lock：lockObject</returns>
+        </member>
+    </members>
+</doc>

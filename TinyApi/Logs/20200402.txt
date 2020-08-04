@@ -1,0 +1,861 @@
+﻿ 
+20200402 15:36:28  ================== WeiXinUser CheckUnionId ==================== 
+20200402 15:36:28 Exception:
+System.Data.Entity.Core.MetadataException: 指定的架构无效。错误: 
+Db.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.ThrowOnNonWarningErrors()
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, Boolean throwOnError, IDbDependencyResolver resolver)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, IDbDependencyResolver resolver, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerInvariantName, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__1()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__4()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadAndCheckItemCollection[T](Func`1 itemCollectionLoader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.<>c__DisplayClass16.<.ctor>b__f()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace, Boolean required)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace)
+   在 System.Data.Entity.Core.Objects.ObjectContext.InitializeMappingViewCacheFactory(DbContext owner)
+   在 System.Data.Entity.Core.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor, ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory, Translator translator, ColumnMapFactory columnMapFactory)
+   在 System.Data.Entity.Internal.InternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.InternalContext.Initialize()
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 Business.WeiXinUser.CheckUnionId(String unionId, WeiXinUser& user) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\WeiXinUser.cs:行号 27
+
+ 
+20200402 15:36:24 =================== Team Load ========================
+20200402 15:36:24 Ip          :::1
+20200402 15:36:24 ---------------------------------------------------------------
+20200402 15:36:24 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "StudentId": null,
+  "UnionId": "ohxsKwPTVSwNHXYpOB43Xcv3jER4",
+  "Sign": "string"
+}
+20200402 15:36:53 CheckUnion Error:当前用户未注册！
+20200402 15:36:53 Results:
+{"Data":{"SchoolName":null,"TeamName":null,"TeamId":"00000000-0000-0000-0000-000000000000","RoomName":null,"StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":null},"Success":false,"ErrorMessage":"当前用户未注册！","ErrorNumber":0}
+
+ 
+20200402 15:37:06  ================== WeiXinUser CheckUnionId ==================== 
+20200402 15:37:06 Exception:
+System.Data.Entity.Core.MetadataException: 指定的架构无效。错误: 
+Db.ssdl(2,2) : 错误 0152: 未找到具有固定名称“System.Data.SqlClient”的 ADO.NET 提供程序的实体框架提供程序。请确保在应用程序配置文件的“entityFramework”节中注册了该提供程序。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=260882。
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.ThrowOnNonWarningErrors()
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader.LoadItems(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Loader..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 sourceFilePaths, Boolean throwOnError, IDbDependencyResolver resolver)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection.Init(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths, Boolean throwOnError, IDbDependencyResolver resolver, DbProviderManifest& providerManifest, DbProviderFactory& providerFactory, String& providerInvariantName, String& providerManifestToken, Memoizer`2& cachedCTypeFunction)
+   在 System.Data.Entity.Core.Metadata.Edm.StoreItemCollection..ctor(IEnumerable`1 xmlReaders, IEnumerable`1 filePaths)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.LoadStoreCollection(EdmItemCollection edmItemCollection, MetadataArtifactLoader loader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__1()
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataCache.<>c__DisplayClass5.<>c__DisplayClass7.<GetMetadataWorkspace>b__4()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.LoadAndCheckItemCollection[T](Func`1 itemCollectionLoader)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.<>c__DisplayClass16.<.ctor>b__f()
+   在 System.Lazy`1.CreateValue()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace, Boolean required)
+   在 System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace.GetItemCollection(DataSpace dataSpace)
+   在 System.Data.Entity.Core.Objects.ObjectContext.InitializeMappingViewCacheFactory(DbContext owner)
+   在 System.Data.Entity.Core.Objects.ObjectContext..ctor(EntityConnection connection, Boolean isConnectionConstructor, ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory, Translator translator, ColumnMapFactory columnMapFactory)
+   在 System.Data.Entity.Internal.InternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalConnection.CreateObjectContextFromConnectionModel()
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.InternalContext.Initialize()
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 Business.WeiXinUser.CheckUnionId(String unionId, WeiXinUser& user) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\WeiXinUser.cs:行号 27
+
+ 
+20200402 15:36:59 =================== Team Load ========================
+20200402 15:36:59 Ip          :::1
+20200402 15:36:59 ---------------------------------------------------------------
+20200402 15:36:59 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "StudentId": null,
+  "UnionId": "ohxsKwPTVSwNHXYpOB43Xcv3jER4",
+  "Sign": "string"
+}
+20200402 15:37:27 CheckUnion Error:当前用户未注册！
+20200402 15:37:27 Results:
+{"Data":{"SchoolName":null,"TeamName":null,"TeamId":"00000000-0000-0000-0000-000000000000","RoomName":null,"StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":null},"Success":false,"ErrorMessage":"当前用户未注册！","ErrorNumber":0}
+
+ 
+20200402 15:40:15  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 15:44:38  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 15:45:35  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 15:45:33 =================== Team Load ========================
+20200402 15:45:33 Ip          :::1
+20200402 15:45:33 ---------------------------------------------------------------
+20200402 15:45:33 Input Data:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "StudentId": null,
+  "UnionId": "ohxsKwPTVSwNHXYpOB43Xcv3jER4",
+  "Sign": "string"
+}
+20200402 15:45:39 Success.
+20200402 15:45:39 Results:
+{"Data":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":null},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 17:22:36  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:22:36 =============== Parent UploadRegister ===============
+20200402 17:22:36 Ip    :::1
+20200402 17:22:36 FormData:1
+20200402 17:22:36 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+
+20200402 17:22:36 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+20200402 17:22:36 IsJsonData:true
+20200402 17:22:36 Params:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "Name": "小佩",
+  "Mobile": "15838030912",
+  "IdNo": "41032819610115012",
+  "Relation": "其他",
+  "StudentName": "小周",
+  "StudentNo": 1,
+  "StudentIdNo": "410328199610115025",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200402 17:22:38 FileData:0
+20200402 17:22:38 Url = 
+20200402 17:23:54 Save Error:班级不存在
+20200402 17:23:54 Results:
+{
+  "Data": {
+    "ParentId": "00000000-0000-0000-0000-000000000000",
+    "StudentId": "00000000-0000-0000-0000-000000000000",
+    "TeamId": "00000000-0000-0000-0000-000000000000"
+  },
+  "Success": false,
+  "ErrorMessage": "班级不存在",
+  "ErrorNumber": 0
+}
+
+ 
+20200402 17:23:57  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:28:17  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:35:36  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:35:36 =============== Parent UploadRegister ===============
+20200402 17:35:36 Ip    :::1
+20200402 17:35:36 FormData:1
+20200402 17:35:36 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+
+20200402 17:35:36 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+20200402 17:35:36 IsJsonData:true
+20200402 17:35:36 Params:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "Name": "小佩",
+  "Mobile": "15838030912",
+  "IdNo": "41032819610115012",
+  "Relation": "其他",
+  "StudentName": "小周",
+  "StudentNo": 1,
+  "StudentIdNo": "410328199610115025",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200402 17:35:38 FileData:0
+20200402 17:35:38 Url = 
+20200402 17:35:38 Save Error:更新条目时出错。有关详细信息，请参阅内部异常。
+System.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\Parent.cs:行号 321
+System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+20200402 17:35:38 Results:
+{
+  "Data": {
+    "ParentId": "00000000-0000-0000-0000-000000000000",
+    "StudentId": "00000000-0000-0000-0000-000000000000",
+    "TeamId": "00000000-0000-0000-0000-000000000000"
+  },
+  "Success": false,
+  "ErrorMessage": "更新条目时出错。有关详细信息，请参阅内部异常。\r\nSystem.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()\r\n   在 System.Data.Entity.DbContext.SaveChanges()\r\n   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\\dev\\学校防疫管理系统\\Code\\SchoolHealth\\Business\\Business\\Parent.cs:行号 321\r\nSystem.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()",
+  "ErrorNumber": 0
+}
+
+ 
+20200402 17:36:07  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:40:53  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:46:07  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:46:07 =============== Parent UploadRegister ===============
+20200402 17:46:07 Ip    :::1
+20200402 17:46:07 FormData:1
+20200402 17:46:07 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+
+20200402 17:46:07 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+20200402 17:46:07 IsJsonData:true
+20200402 17:46:07 Params:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "Name": "小佩",
+  "Mobile": "15838030912",
+  "IdNo": "41032819610115012",
+  "Relation": "其他",
+  "StudentName": "小周",
+  "StudentNo": 1,
+  "StudentIdNo": "410328199610115025",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200402 17:46:08 FileData:0
+20200402 17:46:08 Url = 
+20200402 17:49:54 Save Error:更新条目时出错。有关详细信息，请参阅内部异常。
+System.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\Parent.cs:行号 321
+System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+20200402 17:49:54 Results:
+{
+  "Data": {
+    "ParentId": "00000000-0000-0000-0000-000000000000",
+    "StudentId": "00000000-0000-0000-0000-000000000000",
+    "TeamId": "00000000-0000-0000-0000-000000000000"
+  },
+  "Success": false,
+  "ErrorMessage": "更新条目时出错。有关详细信息，请参阅内部异常。\r\nSystem.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()\r\n   在 System.Data.Entity.DbContext.SaveChanges()\r\n   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\\dev\\学校防疫管理系统\\Code\\SchoolHealth\\Business\\Business\\Parent.cs:行号 321\r\nSystem.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()",
+  "ErrorNumber": 0
+}
+
+ 
+20200402 17:50:00  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 17:50:00 =============== Parent UploadRegister ===============
+20200402 17:50:00 Ip    :::1
+20200402 17:50:00 FormData:1
+20200402 17:50:00 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+
+20200402 17:50:00 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+20200402 17:50:00 IsJsonData:true
+20200402 17:50:00 Params:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "Name": "小佩",
+  "Mobile": "15838030912",
+  "IdNo": "41032819610115012",
+  "Relation": "其他",
+  "StudentName": "小周",
+  "StudentNo": 1,
+  "StudentIdNo": "410328199610115025",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200402 17:50:00 FileData:0
+20200402 17:50:00 Url = 
+20200402 17:50:36 Save Error:更新条目时出错。有关详细信息，请参阅内部异常。
+System.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   在 System.Data.Entity.DbContext.SaveChanges()
+   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\dev\学校防疫管理系统\Code\SchoolHealth\Business\Business\Parent.cs:行号 321
+System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束"RefTeam32"冲突。该冲突发生于数据库"HealthySchool"，表"dbo.Team", column 'TeamId'。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+20200402 17:50:36 Results:
+{
+  "Data": {
+    "ParentId": "00000000-0000-0000-0000-000000000000",
+    "StudentId": "00000000-0000-0000-0000-000000000000",
+    "TeamId": "00000000-0000-0000-0000-000000000000"
+  },
+  "Success": false,
+  "ErrorMessage": "更新条目时出错。有关详细信息，请参阅内部异常。\r\nSystem.Data.Entity.Infrastructure.DbUpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()\r\n   在 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()\r\n   在 System.Data.Entity.DbContext.SaveChanges()\r\n   在 Business.Parent.Register(String unionId, String name, String mobile, String idNo, String relation, Guid teamId, String studentName, String studentIdNo, String studentAvatarUrl, Int32 studentNo, Guid& parentNewId, Guid& studentNewId) 位置 F:\\dev\\学校防疫管理系统\\Code\\SchoolHealth\\Business\\Business\\Parent.cs:行号 321\r\nSystem.Data.Entity.Core.UpdateException: 更新条目时出错。有关详细信息，请参阅内部异常。 ---> System.Data.SqlClient.SqlException: INSERT 语句与 FOREIGN KEY 约束\"RefTeam32\"冲突。该冲突发生于数据库\"HealthySchool\"，表\"dbo.Team\", column 'TeamId'。\r\n语句已终止。\r\n   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)\r\n   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)\r\n   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)\r\n   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()\r\n   在 System.Data.SqlClient.SqlDataReader.get_MetaData()\r\n   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)\r\n   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)\r\n   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)\r\n   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)\r\n   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)\r\n   在 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)\r\n   在 System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   --- 内部异常堆栈跟踪的结尾 ---\r\n   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)\r\n   在 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()\r\n   在 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)\r\n   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)\r\n   在 System.Data.Entity.Internal.InternalContext.SaveChanges()",
+  "ErrorNumber": 0
+}
+
+ 
+20200402 17:50:40  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:02:13  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:02:12 =============== Parent UploadRegister ===============
+20200402 18:02:12 Ip    :::1
+20200402 18:02:13 FormData:1
+20200402 18:02:13 data:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+
+20200402 18:02:13 JsonData:{"UnionId":"ohxsKwNEAH-KIbs8Im4AWDah0kP8","Sign":"","Name":"小佩","Mobile":"15838030912","IdNo":"41032819610115012","Relation":"其他","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","StudentName":"小周","StudentIdNo":"410328199610115025","StudentNo":"1"}
+20200402 18:02:13 IsJsonData:true
+20200402 18:02:13 Params:
+{
+  "TeamId": "d747a208-f73d-4978-9582-854bd04c322b",
+  "Name": "小佩",
+  "Mobile": "15838030912",
+  "IdNo": "41032819610115012",
+  "Relation": "其他",
+  "StudentName": "小周",
+  "StudentNo": 1,
+  "StudentIdNo": "410328199610115025",
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": ""
+}
+20200402 18:02:14 FileData:0
+20200402 18:02:14 Url = 
+20200402 18:02:20 Save Success.
+20200402 18:02:20 Results:
+{
+  "Data": {
+    "ParentId": "e006f2ed-ca89-485e-8c1f-15fe7311a30e",
+    "StudentId": "3d454890-7f99-43f1-8b2e-8b6dd56767fb",
+    "TeamId": "d747a208-f73d-4978-9582-854bd04c322b"
+  },
+  "Success": true,
+  "ErrorMessage": null,
+  "ErrorNumber": 0
+}
+
+ 
+20200402 18:38:48  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:38:48 =================== Parent Home ========================
+20200402 18:38:48 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:38:48 Sign         :string
+20200402 18:38:48 Ip          :::1
+20200402 18:38:48 ---------------------------------------------------------------
+20200402 18:38:48 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:40:05 Exception:
+未将对象引用设置到对象的实例。
+20200402 18:40:05 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":null,"FamilyMembers":null,"TodayBbtRecords":null,"tips":null},"Success":false,"ErrorMessage":"未将对象引用设置到对象的实例。","ErrorNumber":0}
+
+ 
+20200402 18:38:48 =================== Parent Home ========================
+20200402 18:38:48 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:38:48 Sign         :string
+20200402 18:38:48 Ip          :::1
+20200402 18:38:48 ---------------------------------------------------------------
+20200402 18:38:48 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:40:05 Exception:
+未将对象引用设置到对象的实例。
+20200402 18:40:05 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":null,"FamilyMembers":null,"TodayBbtRecords":null,"tips":null},"Success":false,"ErrorMessage":"未将对象引用设置到对象的实例。","ErrorNumber":0}
+
+20200402 18:40:07 Exception:
+未将对象引用设置到对象的实例。
+20200402 18:40:07 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":null,"FamilyMembers":null,"TodayBbtRecords":null,"tips":null},"Success":false,"ErrorMessage":"未将对象引用设置到对象的实例。","ErrorNumber":0}
+
+ 
+20200402 18:40:22  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:40:22 =================== Parent Home ========================
+20200402 18:40:22 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:40:22 Sign         :string
+20200402 18:40:22 Ip          :::1
+20200402 18:40:22 ---------------------------------------------------------------
+20200402 18:40:22 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:40:22 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"}],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"32:00","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"50:00","Content":"测量体温 30.5"}]},"Success":false,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 18:41:56  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:41:56 =================== Parent Home ========================
+20200402 18:41:56 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:41:56 Sign         :string
+20200402 18:41:56 Ip          :::1
+20200402 18:41:56 ---------------------------------------------------------------
+20200402 18:41:56 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:41:56 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"}],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"32:00","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"50:00","Content":"测量体温 30.5"}]},"Success":false,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 18:42:15  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:42:15 =================== Parent Home ========================
+20200402 18:42:15 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:42:15 Sign         :string
+20200402 18:42:15 Ip          :::1
+20200402 18:42:15 ---------------------------------------------------------------
+20200402 18:42:15 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:42:17 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"}],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"32:00","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"50:00","Content":"测量体温 30.5"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 18:43:01  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:43:01 =================== Parent Home ========================
+20200402 18:43:01 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:43:01 Sign         :string
+20200402 18:43:01 Ip          :::1
+20200402 18:43:01 ---------------------------------------------------------------
+20200402 18:43:01 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:43:01 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"},{"Type":0,"Temperature":0.0,"Status":false,"MeasureTime":"0001-01-01T00:00:00"}],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"32:00","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"50:00","Content":"测量体温 30.5"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 18:58:48  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:58:48 =================== Parent Home ========================
+20200402 18:58:48 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:58:48 Sign         :string
+20200402 18:58:48 Ip          :::1
+20200402 18:58:48 ---------------------------------------------------------------
+20200402 18:58:48 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:58:53 Exception:
+年、月和日参数描述无法表示的 DateTime。
+20200402 18:58:53 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"06:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"06:50","Content":"测量体温 30.5"}],"schedules":[]},"Success":false,"ErrorMessage":"年、月和日参数描述无法表示的 DateTime。","ErrorNumber":0}
+
+ 
+20200402 18:59:28  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 18:59:28 =================== Parent Home ========================
+20200402 18:59:28 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 18:59:28 Sign         :string
+20200402 18:59:28 Ip          :::1
+20200402 18:59:28 ---------------------------------------------------------------
+20200402 18:59:28 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 18:59:49 Exception:
+年、月和日参数描述无法表示的 DateTime。
+20200402 18:59:49 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"18:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[]},"Success":false,"ErrorMessage":"年、月和日参数描述无法表示的 DateTime。","ErrorNumber":0}
+
+ 
+20200402 19:00:23  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:00:23 =================== Parent Home ========================
+20200402 19:00:23 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:00:23 Sign         :string
+20200402 19:00:23 Ip          :::1
+20200402 19:00:23 ---------------------------------------------------------------
+20200402 19:00:23 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:00:53 Exception:
+年、月和日参数描述无法表示的 DateTime。
+20200402 19:00:53 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"18:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[]},"Success":false,"ErrorMessage":"年、月和日参数描述无法表示的 DateTime。","ErrorNumber":0}
+
+ 
+20200402 19:00:23 =================== Parent Home ========================
+20200402 19:00:23 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:00:23 Sign         :string
+20200402 19:00:23 Ip          :::1
+20200402 19:00:23 ---------------------------------------------------------------
+20200402 19:00:23 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:00:53 Exception:
+年、月和日参数描述无法表示的 DateTime。
+20200402 19:00:53 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"18:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[]},"Success":false,"ErrorMessage":"年、月和日参数描述无法表示的 DateTime。","ErrorNumber":0}
+
+20200402 19:00:53 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"18:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[]},"Success":false,"ErrorMessage":"年、月和日参数描述无法表示的 DateTime。","ErrorNumber":0}
+
+ 
+20200402 19:01:12  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:01:12 =================== Parent Home ========================
+20200402 19:01:12 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:01:12 Sign         :string
+20200402 19:01:12 Ip          :::1
+20200402 19:01:12 ---------------------------------------------------------------
+20200402 19:01:12 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:01:16 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"Time":"2020-04-02T18:32:00","TimeStr":"18:32","Content":"添加学生小周"},{"Time":"2020-04-02T18:50:00","TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 19:04:45  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:04:44 =================== Parent Home ========================
+20200402 19:04:44 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:04:44 Sign         :string
+20200402 19:04:44 Ip          :::1
+20200402 19:04:44 ---------------------------------------------------------------
+20200402 19:04:44 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:04:51 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[],"tips":[{"TimeStr":"18:32","Content":"添加学生小周"},{"TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 19:08:40  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:08:40 =================== Parent Home ========================
+20200402 19:08:40 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:08:40 Sign         :string
+20200402 19:08:40 Ip          :::1
+20200402 19:08:40 ---------------------------------------------------------------
+20200402 19:08:40 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:08:49 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":true,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":3,"Temperature":36.5,"Status":false,"MeasureTimeStr":"08:32"}],"tips":[{"TimeStr":"18:32","Content":"添加学生小周"},{"TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 19:28:57  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:28:57 =================== Parent Home ========================
+20200402 19:28:57 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:28:57 Sign         :string
+20200402 19:28:57 Ip          :::1
+20200402 19:28:57 ---------------------------------------------------------------
+20200402 19:28:57 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:29:05 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":false,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":0,"ParentNum":0,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":3,"Temperature":36.5,"Status":false,"MeasureTimeStr":"08:32"}],"tips":[{"TimeStr":"18:32","Content":"添加学生小周"},{"TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+
+ 
+20200402 19:35:27  ================== WeiXinUser CheckUnionId ==================== 
+
+ 
+20200402 19:35:27 =================== Parent Home ========================
+20200402 19:35:27 UnionId      :ohxsKwNEAH-KIbs8Im4AWDah0kP8
+20200402 19:35:27 Sign         :string
+20200402 19:35:27 Ip          :::1
+20200402 19:35:27 ---------------------------------------------------------------
+20200402 19:35:27 Input Data:
+{
+  "StudentId": "7f1411aa-8312-40c7-ac2a-c5e4338856f0",
+  "TeamId": null,
+  "UnionId": "ohxsKwNEAH-KIbs8Im4AWDah0kP8",
+  "Sign": "string"
+}
+20200402 19:35:33 Results:
+{"Data":{"HolidayStatus":0,"CheckinStatus":false,"MeasureBbtStatus":true,"NeedFamilyTest":true,"UploadBbtPhotoType":1,"Team":{"SchoolName":"安吉路实验学校","TeamName":"一年级(1)班","TeamId":"d747a208-f73d-4978-9582-854bd04c322b","RoomName":"","StudentNum":1,"ParentNum":1,"TeacherNum":0,"Student":{"AvatarUrl":"/Userfiles/Students/202004/20200402/d747a208-f73d-4978-9582-854bd04c322b/c35802fb2ae241658472e5b1b2da7241.png?r=W8E4TNPB","Name":"周周","IdNo":"410328199610115025","No":1,"StudentId":"7f1411aa-8312-40c7-ac2a-c5e4338856f0"}},"FamilyMembers":[{"HeadImgUrl":"https://wx.qlogo.cn/mmopen/vi_32/t5WJ9oHH88jxBVFbh9AcwR0I04gPFTJqBRoicfEeg9H7VklP7lXBQrgLEy6Euq26uwppibIQGsMYiaLfMXaAYfB0Q/132","isCheckin":false}],"TodayBbtRecords":[{"Type":3,"Temperature":36.5,"Status":false,"MeasureTimeStr":"08:32"}],"tips":[{"TimeStr":"18:32","Content":"添加学生小周"},{"TimeStr":"18:50","Content":"测量体温 30.5"}],"schedules":[{"Type":1,"StartTimeStr":"08:00","EndTimeStr":"09:00"},{"Type":2,"StartTimeStr":"18:00","EndTimeStr":"19:00"}]},"Success":true,"ErrorMessage":null,"ErrorNumber":0}
+

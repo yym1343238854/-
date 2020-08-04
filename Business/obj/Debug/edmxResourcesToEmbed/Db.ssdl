@@ -1,0 +1,2204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HealthySchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AbsenceRecord">
+    <Key>
+      <PropertyRef Name="AbsenceRecordId" />
+    </Key>
+    <Property Name="AbsenceRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpecDay" Type="datetime" Nullable="false" />
+    <Property Name="EndDay" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="PeopleType" Type="tinyint" Nullable="false" />
+    <Property Name="StudentId" Type="uniqueidentifier" />
+    <Property Name="TeacherId" Type="uniqueidentifier" />
+    <Property Name="Type" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AirRecord">
+    <Key>
+      <PropertyRef Name="AirRecordId" />
+    </Key>
+    <Property Name="AirRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Arrangement">
+    <Key>
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="ArrangementId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Frequence" Type="int" Nullable="false" />
+    <Property Name="RoomNum" Type="int" Nullable="false" />
+    <Property Name="FrequenceType" Type="tinyint" Nullable="false" />
+    <Property Name="WeekDays" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArrangementAsset">
+    <Key>
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="ArrangementId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArrangementDetail">
+    <Key>
+      <PropertyRef Name="ArrangementDetailId" />
+    </Key>
+    <Property Name="ArrangementDetailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="ArrangementId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“HealthySchool.dbo.Asset”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Num" />
+      <PropertyRef Name="Checkintime" />
+      <PropertyRef Name="SchoolId" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Num" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Width" Type="int" Nullable="false" />
+    <Property Name="Height" Type="int" Nullable="false" />
+    <Property Name="OriginalName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="AirRecordId" Type="uniqueidentifier" />
+    <Property Name="DisinfectRecordId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="ProvinceId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClaimRecord">
+    <Key>
+      <PropertyRef Name="ClaimRecord" />
+    </Key>
+    <Property Name="ClaimRecord" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Num" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Keeper" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="County">
+    <Key>
+      <PropertyRef Name="CountyId" />
+    </Key>
+    <Property Name="CountyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="CityId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DataDictionary">
+    <Key>
+      <PropertyRef Name="DataDictionaryId" />
+    </Key>
+    <Property Name="DataDictionaryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Catalogs" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DisinfectRecord">
+    <Key>
+      <PropertyRef Name="DisinfectRecordId" />
+    </Key>
+    <Property Name="DisinfectRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" Nullable="false" />
+    <Property Name="EndTime" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AssetsComment" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="PublishTime" Type="datetime" />
+    <Property Name="Url" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Ext" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+    <Property Name="Views" Type="int" />
+    <Property Name="LastModifyTime" Type="datetime" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EnterRecord">
+    <Key>
+      <PropertyRef Name="EnterRecordId" />
+    </Key>
+    <Property Name="EnterRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="decimal" Precision="18" Scale="1" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="PeopleType" Type="tinyint" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" />
+    <Property Name="StudentId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ExceptionCase">
+    <Key>
+      <PropertyRef Name="ExceptionCaseId" />
+    </Key>
+    <Property Name="ExceptionCaseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="datetime" />
+    <Property Name="PeopleType" Type="tinyint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="AbsenceRecordId" Type="uniqueidentifier" />
+    <Property Name="TeacherId" Type="uniqueidentifier" />
+    <Property Name="StudentId" Type="uniqueidentifier" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="StudentBbtRecordId" Type="uniqueidentifier" />
+    <Property Name="TeacherBbtRecordId" Type="uniqueidentifier" />
+    <Property Name="ParentCheckinId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ExceptionCaseHistory">
+    <Key>
+      <PropertyRef Name="ExceptionCaseHistoryId" />
+    </Key>
+    <Property Name="ExceptionCaseHistoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HealthyStatus" Type="tinyint" Nullable="false" />
+    <Property Name="ExceptionCaseId" Type="uniqueidentifier" />
+    <Property Name="Content" Type="nvarchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="HolidayId" />
+    </Key>
+    <Property Name="HolidayId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpecDay" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mng_UserRole">
+    <Key>
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+    </Key>
+    <Property Name="ModuleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="OrderFlag" Type="int" Nullable="false" />
+    <Property Name="Num" Type="int" Nullable="false" />
+    <Property Name="Picture" Type="varchar" MaxLength="250" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="CheckinTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuleItem">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PageUrl" Type="varchar" MaxLength="100" />
+    <Property Name="MenuItemPicture" Type="varchar" MaxLength="250" />
+    <Property Name="IsMenuItem" Type="bit" Nullable="false" />
+    <Property Name="ModuleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrderFlag" Type="int" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuleItemPrivilege">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+      <PropertyRef Name="PrivilegeId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PrivilegeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuleRolePermission">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ModuleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewsId" />
+    </Key>
+    <Property Name="NewsId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RangeType" Type="tinyint" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="PeopleType" Type="tinyint" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CoverUrl" Type="varchar" MaxLength="300" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="PublishTime" Type="datetime" />
+    <Property Name="Hits" Type="int" />
+    <Property Name="LastModifyTime" Type="datetime" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewsAttachment">
+    <Key>
+      <PropertyRef Name="NewsAttachmentId" />
+    </Key>
+    <Property Name="NewsAttachmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NewsId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="OriginalName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Ext" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hits" Type="int" Nullable="false" />
+    <Property Name="FileSize" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="NotificationId" />
+    </Key>
+    <Property Name="NotificationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="InitiatorId" Type="uniqueidentifier" />
+    <Property Name="Handler" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExceptionCaseId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parent">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="ParentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="HealthyStatus" Type="tinyint" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="LastAccessTime" Type="datetime" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="UnionId" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParentCheckin">
+    <Key>
+      <PropertyRef Name="ParentCheckinId" />
+    </Key>
+    <Property Name="ParentCheckinId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpecDay" Type="datetime" Nullable="false" />
+    <Property Name="PhotoUrl" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Privilege">
+    <Key>
+      <PropertyRef Name="PrivilegeId" />
+    </Key>
+    <Property Name="PrivilegeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="CheckinTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="ProvinceId" />
+    </Key>
+    <Property Name="ProvinceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="1000" />
+    <Property Name="Num" Type="int" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RolePermission">
+    <Key>
+      <PropertyRef Name="ModuleItemId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ModuleItemId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EffectiveCode" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="RoomId" />
+    </Key>
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="MeasureType" Type="tinyint" Nullable="false" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoomPlan">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ArrangementId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoomTeacher">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="StartHhmm" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="EndHhmm" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TeamNum" Type="int" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="SchoolId" />
+    </Key>
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeamNum" Type="int" Nullable="false" />
+    <Property Name="TeacherNum" Type="int" Nullable="false" />
+    <Property Name="StudentNum" Type="int" Nullable="false" />
+    <Property Name="RoomNum" Type="int" Nullable="false" />
+    <Property Name="ParentNum" Type="int" Nullable="false" />
+    <Property Name="CountyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubDomain" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NeedDisInfectPhoto" Type="tinyint" Nullable="false" />
+    <Property Name="NeedAirPhoto" Type="tinyint" Nullable="false" />
+    <Property Name="NeedFamilyTest" Type="bit" Nullable="false" />
+    <Property Name="NeedTemperaturePhoto" Type="tinyint" Nullable="false" />
+    <Property Name="EnterMode" Type="bit" Nullable="false" />
+    <Property Name="NeedClaimModule" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockIn">
+    <Key>
+      <PropertyRef Name="StockInId" />
+    </Key>
+    <Property Name="StockInId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Num" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Provider" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="30" />
+    <Property Name="Model" Type="nvarchar" MaxLength="30" />
+    <Property Name="BuyTime" Type="datetime" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AvatarUrl" Type="varchar" MaxLength="300" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="HealthyStatus" Type="tinyint" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="18" />
+    <Property Name="No" Type="int" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastAccessTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StudentBbtRecord">
+    <Key>
+      <PropertyRef Name="StudentBbtRecordId" />
+    </Key>
+    <Property Name="StudentBbtRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpecDay" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="decimal" Precision="18" Scale="1" Nullable="false" />
+    <Property Name="PhotoUrl" Type="varchar" MaxLength="300" />
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" />
+    <Property Name="TeacherId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="StudentParent">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Relationship" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsSchoolAdmin" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="varchar" MaxLength="32" />
+    <Property Name="HealthyStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="No" Type="varchar" MaxLength="10" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="LoginTimes" Type="int" Nullable="false" />
+    <Property Name="LastAccessTime" Type="datetime" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="AvatarUrl" Type="varchar" MaxLength="300" />
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UnionId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TeacherBbtRecord">
+    <Key>
+      <PropertyRef Name="TeacherBbtRecordId" />
+    </Key>
+    <Property Name="TeacherBbtRecordId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SpecDay" Type="datetime" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="decimal" Precision="18" Scale="1" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Measurer" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherLog">
+    <Key>
+      <PropertyRef Name="TeacherLogId" />
+    </Key>
+    <Property Name="TeacherLogId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Operation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="50" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherRole">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeacherTag">
+    <Key>
+      <PropertyRef Name="DataDictionaryId" />
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="DataDictionaryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="10" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="StudentNum" Type="int" Nullable="false" />
+    <Property Name="TeacherNum" Type="int" Nullable="false" />
+    <Property Name="ParentNum" Type="int" Nullable="false" />
+    <Property Name="RoomId" Type="uniqueidentifier" />
+    <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="GradeYear" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamClassroom">
+    <Key>
+      <PropertyRef Name="RoomId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="RoomId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamNews">
+    <Key>
+      <PropertyRef Name="NewsId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="NewsId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamSchedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="ScheduleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamStudent">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="No" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamTeacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeacherId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsHead" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TinyAppSession">
+    <Key>
+      <PropertyRef Name="OpenId" />
+    </Key>
+    <Property Name="OpenId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SessionKey" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="SessionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastActiveTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tips">
+    <Key>
+      <PropertyRef Name="TipsId" />
+    </Key>
+    <Property Name="TipsId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FontColor" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ActionTime" Type="datetime" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="RoomId" Type="uniqueidentifier" />
+    <Property Name="StudentId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="VerifyCode">
+    <Key>
+      <PropertyRef Name="VerifyCodeId" />
+    </Key>
+    <Property Name="VerifyCodeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="VerifyTime" Type="datetime" />
+    <Property Name="UnionId" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="VisitorId" />
+    </Key>
+    <Property Name="VisitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Type" Type="tinyint" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdNo" Type="varchar" MaxLength="18" />
+    <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Host" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ColorStatus" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="Recorder" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WeiXinUser">
+    <Key>
+      <PropertyRef Name="UnionId" />
+    </Key>
+    <Property Name="UnionId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="tinyint" Nullable="false" />
+    <Property Name="Checkintime" Type="datetime" Nullable="false" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HeadImage" Type="varchar" MaxLength="300" />
+    <Property Name="OpenId" Type="varchar" MaxLength="50" />
+    <Property Name="TinyAppOpenId" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="10" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Province" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="ComeFrom" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AccessTimes" Type="int" Nullable="false" />
+    <Property Name="LastAccessTime" Type="datetime" />
+    <Property Name="Subscribe" Type="bit" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Association Name="RefAbsenceRecord502">
+    <End Role="AbsenceRecord" Type="Self.AbsenceRecord" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AbsenceRecord">
+        <PropertyRef Name="AbsenceRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="AbsenceRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefAirRecord372">
+    <End Role="AirRecord" Type="Self.AirRecord" Multiplicity="0..1" />
+    <End Role="Attachment" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AirRecord">
+        <PropertyRef Name="AirRecordId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="AirRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1052">
+    <End Role="Arrangement" Type="Self.Arrangement" Multiplicity="1" />
+    <End Role="ArrangementDetail" Type="Self.ArrangementDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="ArrangementDetail">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1062">
+    <End Role="Arrangement" Type="Self.Arrangement" Multiplicity="1" />
+    <End Role="ArrangementAsset" Type="Self.ArrangementAsset" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="ArrangementAsset">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefArrangement1262">
+    <End Role="Arrangement" Type="Self.Arrangement" Multiplicity="1" />
+    <End Role="RoomPlan" Type="Self.RoomPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="RoomPlan">
+        <PropertyRef Name="ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCity562">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="County" Type="Self.County" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="County">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefCounty572">
+    <End Role="County" Type="Self.County" Multiplicity="1" />
+    <End Role="School" Type="Self.School" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="County">
+        <PropertyRef Name="CountyId" />
+      </Principal>
+      <Dependent Role="School">
+        <PropertyRef Name="CountyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDataDictionary1282">
+    <End Role="DataDictionary" Type="Self.DataDictionary" Multiplicity="1" />
+    <End Role="TeacherTag" Type="Self.TeacherTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataDictionary">
+        <PropertyRef Name="DataDictionaryId" />
+      </Principal>
+      <Dependent Role="TeacherTag">
+        <PropertyRef Name="DataDictionaryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDataDictionary1312">
+    <End Role="DataDictionary" Type="Self.DataDictionary" Multiplicity="1" />
+    <End Role="AbsenceRecord" Type="Self.AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DataDictionary">
+        <PropertyRef Name="DataDictionaryId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefDisinfectRecord382">
+    <End Role="DisinfectRecord" Type="Self.DisinfectRecord" Multiplicity="0..1" />
+    <End Role="Attachment" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DisinfectRecord">
+        <PropertyRef Name="DisinfectRecordId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="DisinfectRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefExceptionCase1022">
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExceptionCase">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefExceptionCase482">
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="0..1" />
+    <End Role="ExceptionCaseHistory" Type="Self.ExceptionCaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExceptionCase">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Principal>
+      <Dependent Role="ExceptionCaseHistory">
+        <PropertyRef Name="ExceptionCaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModule862">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="ModuleItem" Type="Self.ModuleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="ModuleItem">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModule922">
+    <End Role="Module" Type="Self.Module" Multiplicity="1" />
+    <End Role="ModuleRolePermission" Type="Self.ModuleRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="ModuleId" />
+      </Principal>
+      <Dependent Role="ModuleRolePermission">
+        <PropertyRef Name="ModuleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem842">
+    <End Role="ModuleItem" Type="Self.ModuleItem" Multiplicity="1" />
+    <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="RolePermission">
+        <PropertyRef Name="ModuleItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem852">
+    <End Role="ModuleItem" Type="Self.ModuleItem" Multiplicity="1" />
+    <End Role="ModuleItemPrivilege" Type="Self.ModuleItemPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="ModuleItemPrivilege">
+        <PropertyRef Name="ModuleItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefModuleItem872">
+    <End Role="ModuleItem" Type="Self.ModuleItem" Multiplicity="0..1" />
+    <End Role="ModuleItem1" Type="Self.ModuleItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModuleItem">
+        <PropertyRef Name="ModuleItemId" />
+      </Principal>
+      <Dependent Role="ModuleItem1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefNews1142">
+    <End Role="News" Type="Self.News" Multiplicity="1" />
+    <End Role="TeamNews" Type="Self.TeamNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="NewsId" />
+      </Principal>
+      <Dependent Role="TeamNews">
+        <PropertyRef Name="NewsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefNews1222">
+    <End Role="News" Type="Self.News" Multiplicity="1" />
+    <End Role="NewsAttachment" Type="Self.NewsAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="News">
+        <PropertyRef Name="NewsId" />
+      </Principal>
+      <Dependent Role="NewsAttachment">
+        <PropertyRef Name="NewsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent182">
+    <End Role="Parent" Type="Self.Parent" Multiplicity="1" />
+    <End Role="StudentParent" Type="Self.StudentParent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="StudentParent">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent242">
+    <End Role="Parent" Type="Self.Parent" Multiplicity="1" />
+    <End Role="ParentCheckin" Type="Self.ParentCheckin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="ParentCheckin">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent342">
+    <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+    <End Role="StudentBbtRecord" Type="Self.StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParent682">
+    <End Role="Parent" Type="Self.Parent" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parent">
+        <PropertyRef Name="ParentId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefParentCheckin1212">
+    <End Role="ParentCheckin" Type="Self.ParentCheckin" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParentCheckin">
+        <PropertyRef Name="ParentCheckinId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="ParentCheckinId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefPrivilege932">
+    <End Role="Privilege" Type="Self.Privilege" Multiplicity="1" />
+    <End Role="ModuleItemPrivilege" Type="Self.ModuleItemPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Privilege">
+        <PropertyRef Name="PrivilegeId" />
+      </Principal>
+      <Dependent Role="ModuleItemPrivilege">
+        <PropertyRef Name="PrivilegeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefProvince802">
+    <End Role="Province" Type="Self.Province" Multiplicity="1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="ProvinceId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="ProvinceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole882">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="Mng_UserRole" Type="Self.Mng_UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Mng_UserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole902">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="ModuleRolePermission" Type="Self.ModuleRolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="ModuleRolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole912">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="RolePermission">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRole962">
+    <End Role="Role" Type="Self.Role" Multiplicity="1" />
+    <End Role="TeacherRole" Type="Self.TeacherRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="TeacherRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom1102">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Tips" Type="Self.Tips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Tips">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom112">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1" />
+    <End Role="Team" Type="Self.Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom1252">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="RoomPlan" Type="Self.RoomPlan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomPlan">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom152">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="TeamClassroom" Type="Self.TeamClassroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="TeamClassroom">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom292">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="DisinfectRecord" Type="Self.DisinfectRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="DisinfectRecord">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom302">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="AirRecord" Type="Self.AirRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="AirRecord">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefRoom462">
+    <End Role="Room" Type="Self.Room" Multiplicity="1" />
+    <End Role="RoomTeacher" Type="Self.RoomTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="RoomId" />
+      </Principal>
+      <Dependent Role="RoomTeacher">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchedule1232">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="1" />
+    <End Role="TeamSchedule" Type="Self.TeamSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ScheduleId" />
+      </Principal>
+      <Dependent Role="TeamSchedule">
+        <PropertyRef Name="ScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool582">
+    <End Role="School" Type="Self.School" Multiplicity="1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool732">
+    <End Role="School" Type="Self.School" Multiplicity="1" />
+    <End Role="Team" Type="Self.Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool742">
+    <End Role="School" Type="Self.School" Multiplicity="1" />
+    <End Role="Room" Type="Self.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool752">
+    <End Role="School" Type="Self.School" Multiplicity="1" />
+    <End Role="Asset" Type="Self.Asset" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Asset">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefSchool762">
+    <End Role="School" Type="Self.School" Multiplicity="1" />
+    <End Role="Holiday" Type="Self.Holiday" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="SchoolId" />
+      </Principal>
+      <Dependent Role="Holiday">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent1112">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Tips" Type="Self.Tips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Tips">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent172">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentParent" Type="Self.StudentParent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentParent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent202">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="StudentBbtRecord" Type="Self.StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent42">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="TeamStudent" Type="Self.TeamStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="TeamStudent">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent522">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="EnterRecord" Type="Self.EnterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="EnterRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent642">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="AbsenceRecord" Type="Self.AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudent672">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefStudentBbtRecord1192">
+    <End Role="StudentBbtRecord" Type="Self.StudentBbtRecord" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentBbtRecord">
+        <PropertyRef Name="StudentBbtRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="StudentBbtRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1002">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="InitiatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1012">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="Handler" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1122">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1132">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Document" Type="Self.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher12">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeamTeacher" Type="Self.TeamTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeamTeacher">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1292">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeacherTag" Type="Self.TeacherTag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherTag">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1302">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="ClaimRecord" Type="Self.ClaimRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ClaimRecord">
+        <PropertyRef Name="Keeper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher1332">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="StockIn" Type="Self.StockIn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="StockIn">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher212">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeacherBbtRecord" Type="Self.TeacherBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherBbtRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher232">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeacherBbtRecord" Type="Self.TeacherBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherBbtRecord">
+        <PropertyRef Name="Measurer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher322">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="AirRecord" Type="Self.AirRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="AirRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher352">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="StudentBbtRecord" Type="Self.StudentBbtRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="StudentBbtRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher472">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="RoomTeacher" Type="Self.RoomTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="RoomTeacher">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher512">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="EnterRecord" Type="Self.EnterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="EnterRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher542">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="ClaimRecord" Type="Self.ClaimRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ClaimRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher612">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Visitor" Type="Self.Visitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Visitor">
+        <PropertyRef Name="Recorder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher652">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="AbsenceRecord" Type="Self.AbsenceRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="AbsenceRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher662">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher822">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="ExceptionCaseHistory" Type="Self.ExceptionCaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="ExceptionCaseHistory">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher832">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="DisinfectRecord" Type="Self.DisinfectRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="DisinfectRecord">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher942">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="Mng_UserRole" Type="Self.Mng_UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="Mng_UserRole">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher952">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeacherRole" Type="Self.TeacherRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherRole">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacher992">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="1" />
+    <End Role="TeacherLog" Type="Self.TeacherLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherLog">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeacherBbtRecord1202">
+    <End Role="TeacherBbtRecord" Type="Self.TeacherBbtRecord" Multiplicity="0..1" />
+    <End Role="ExceptionCase" Type="Self.ExceptionCase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeacherBbtRecord">
+        <PropertyRef Name="TeacherBbtRecordId" />
+      </Principal>
+      <Dependent Role="ExceptionCase">
+        <PropertyRef Name="TeacherBbtRecordId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam1162">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamNews" Type="Self.TeamNews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamNews">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam1242">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamSchedule" Type="Self.TeamSchedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamSchedule">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam162">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamClassroom" Type="Self.TeamClassroom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamClassroom">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam22">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamTeacher" Type="Self.TeamTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamTeacher">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam32">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefTeam52">
+    <End Role="Team" Type="Self.Team" Multiplicity="1" />
+    <End Role="TeamStudent" Type="Self.TeamStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamStudent">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser782">
+    <End Role="WeiXinUser" Type="Self.WeiXinUser" Multiplicity="0..1" />
+    <End Role="VerifyCode" Type="Self.VerifyCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="VerifyCode">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser792">
+    <End Role="WeiXinUser" Type="Self.WeiXinUser" Multiplicity="1" />
+    <End Role="Parent" Type="Self.Parent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="Parent">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RefWeiXinUser812">
+    <End Role="WeiXinUser" Type="Self.WeiXinUser" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WeiXinUser">
+        <PropertyRef Name="UnionId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="UnionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HealthySchoolModelStoreContainer">
+    <EntitySet Name="AbsenceRecord" EntityType="Self.AbsenceRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AirRecord" EntityType="Self.AirRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arrangement" EntityType="Self.Arrangement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArrangementAsset" EntityType="Self.ArrangementAsset" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArrangementDetail" EntityType="Self.ArrangementDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attachment" EntityType="Self.Attachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClaimRecord" EntityType="Self.ClaimRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="County" EntityType="Self.County" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DataDictionary" EntityType="Self.DataDictionary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DisinfectRecord" EntityType="Self.DisinfectRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnterRecord" EntityType="Self.EnterRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExceptionCase" EntityType="Self.ExceptionCase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExceptionCaseHistory" EntityType="Self.ExceptionCaseHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mng_UserRole" EntityType="Self.Mng_UserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuleItem" EntityType="Self.ModuleItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuleItemPrivilege" EntityType="Self.ModuleItemPrivilege" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ModuleRolePermission" EntityType="Self.ModuleRolePermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewsAttachment" EntityType="Self.NewsAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parent" EntityType="Self.Parent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParentCheckin" EntityType="Self.ParentCheckin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Privilege" EntityType="Self.Privilege" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RolePermission" EntityType="Self.RolePermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomPlan" EntityType="Self.RoomPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoomTeacher" EntityType="Self.RoomTeacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="School" EntityType="Self.School" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockIn" EntityType="Self.StockIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentBbtRecord" EntityType="Self.StudentBbtRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentParent" EntityType="Self.StudentParent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherBbtRecord" EntityType="Self.TeacherBbtRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherLog" EntityType="Self.TeacherLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherRole" EntityType="Self.TeacherRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherTag" EntityType="Self.TeacherTag" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamClassroom" EntityType="Self.TeamClassroom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamNews" EntityType="Self.TeamNews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamSchedule" EntityType="Self.TeamSchedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamStudent" EntityType="Self.TeamStudent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeamTeacher" EntityType="Self.TeamTeacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinyAppSession" EntityType="Self.TinyAppSession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tips" EntityType="Self.Tips" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VerifyCode" EntityType="Self.VerifyCode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visitor" EntityType="Self.Visitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeiXinUser" EntityType="Self.WeiXinUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Asset" EntityType="Self.Asset" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Asset].[Id] AS [Id], 
+    [Asset].[Status] AS [Status], 
+    [Asset].[Type] AS [Type], 
+    [Asset].[Name] AS [Name], 
+    [Asset].[Num] AS [Num], 
+    [Asset].[Unit] AS [Unit], 
+    [Asset].[Remark] AS [Remark], 
+    [Asset].[Checkintime] AS [Checkintime], 
+    [Asset].[SchoolId] AS [SchoolId]
+    FROM [dbo].[Asset] AS [Asset]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="RefAbsenceRecord502" Association="Self.RefAbsenceRecord502">
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefAirRecord372" Association="Self.RefAirRecord372">
+      <End Role="AirRecord" EntitySet="AirRecord" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1052" Association="Self.RefArrangement1052">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="ArrangementDetail" EntitySet="ArrangementDetail" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1062" Association="Self.RefArrangement1062">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="ArrangementAsset" EntitySet="ArrangementAsset" />
+    </AssociationSet>
+    <AssociationSet Name="RefArrangement1262" Association="Self.RefArrangement1262">
+      <End Role="Arrangement" EntitySet="Arrangement" />
+      <End Role="RoomPlan" EntitySet="RoomPlan" />
+    </AssociationSet>
+    <AssociationSet Name="RefCity562" Association="Self.RefCity562">
+      <End Role="City" EntitySet="City" />
+      <End Role="County" EntitySet="County" />
+    </AssociationSet>
+    <AssociationSet Name="RefCounty572" Association="Self.RefCounty572">
+      <End Role="County" EntitySet="County" />
+      <End Role="School" EntitySet="School" />
+    </AssociationSet>
+    <AssociationSet Name="RefDataDictionary1282" Association="Self.RefDataDictionary1282">
+      <End Role="DataDictionary" EntitySet="DataDictionary" />
+      <End Role="TeacherTag" EntitySet="TeacherTag" />
+    </AssociationSet>
+    <AssociationSet Name="RefDataDictionary1312" Association="Self.RefDataDictionary1312">
+      <End Role="DataDictionary" EntitySet="DataDictionary" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefDisinfectRecord382" Association="Self.RefDisinfectRecord382">
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefExceptionCase1022" Association="Self.RefExceptionCase1022">
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefExceptionCase482" Association="Self.RefExceptionCase482">
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+      <End Role="ExceptionCaseHistory" EntitySet="ExceptionCaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="RefModule862" Association="Self.RefModule862">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+    </AssociationSet>
+    <AssociationSet Name="RefModule922" Association="Self.RefModule922">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="ModuleRolePermission" EntitySet="ModuleRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem842" Association="Self.RefModuleItem842">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="RolePermission" EntitySet="RolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem852" Association="Self.RefModuleItem852">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="ModuleItemPrivilege" EntitySet="ModuleItemPrivilege" />
+    </AssociationSet>
+    <AssociationSet Name="RefModuleItem872" Association="Self.RefModuleItem872">
+      <End Role="ModuleItem" EntitySet="ModuleItem" />
+      <End Role="ModuleItem1" EntitySet="ModuleItem" />
+    </AssociationSet>
+    <AssociationSet Name="RefNews1142" Association="Self.RefNews1142">
+      <End Role="News" EntitySet="News" />
+      <End Role="TeamNews" EntitySet="TeamNews" />
+    </AssociationSet>
+    <AssociationSet Name="RefNews1222" Association="Self.RefNews1222">
+      <End Role="News" EntitySet="News" />
+      <End Role="NewsAttachment" EntitySet="NewsAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent182" Association="Self.RefParent182">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="StudentParent" EntitySet="StudentParent" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent242" Association="Self.RefParent242">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="ParentCheckin" EntitySet="ParentCheckin" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent342" Association="Self.RefParent342">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefParent682" Association="Self.RefParent682">
+      <End Role="Parent" EntitySet="Parent" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefParentCheckin1212" Association="Self.RefParentCheckin1212">
+      <End Role="ParentCheckin" EntitySet="ParentCheckin" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefPrivilege932" Association="Self.RefPrivilege932">
+      <End Role="Privilege" EntitySet="Privilege" />
+      <End Role="ModuleItemPrivilege" EntitySet="ModuleItemPrivilege" />
+    </AssociationSet>
+    <AssociationSet Name="RefProvince802" Association="Self.RefProvince802">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole882" Association="Self.RefRole882">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Mng_UserRole" EntitySet="Mng_UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole902" Association="Self.RefRole902">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="ModuleRolePermission" EntitySet="ModuleRolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole912" Association="Self.RefRole912">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="RolePermission" EntitySet="RolePermission" />
+    </AssociationSet>
+    <AssociationSet Name="RefRole962" Association="Self.RefRole962">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="TeacherRole" EntitySet="TeacherRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom1102" Association="Self.RefRoom1102">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Tips" EntitySet="Tips" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom112" Association="Self.RefRoom112">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom1252" Association="Self.RefRoom1252">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="RoomPlan" EntitySet="RoomPlan" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom152" Association="Self.RefRoom152">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="TeamClassroom" EntitySet="TeamClassroom" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom292" Association="Self.RefRoom292">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom302" Association="Self.RefRoom302">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="AirRecord" EntitySet="AirRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefRoom462" Association="Self.RefRoom462">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="RoomTeacher" EntitySet="RoomTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchedule1232" Association="Self.RefSchedule1232">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="TeamSchedule" EntitySet="TeamSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool582" Association="Self.RefSchool582">
+      <End Role="School" EntitySet="School" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool732" Association="Self.RefSchool732">
+      <End Role="School" EntitySet="School" />
+      <End Role="Team" EntitySet="Team" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool742" Association="Self.RefSchool742">
+      <End Role="School" EntitySet="School" />
+      <End Role="Room" EntitySet="Room" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool752" Association="Self.RefSchool752">
+      <End Role="School" EntitySet="School" />
+      <End Role="Asset" EntitySet="Asset" />
+    </AssociationSet>
+    <AssociationSet Name="RefSchool762" Association="Self.RefSchool762">
+      <End Role="School" EntitySet="School" />
+      <End Role="Holiday" EntitySet="Holiday" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent1112" Association="Self.RefStudent1112">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Tips" EntitySet="Tips" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent172" Association="Self.RefStudent172">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentParent" EntitySet="StudentParent" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent202" Association="Self.RefStudent202">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent42" Association="Self.RefStudent42">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="TeamStudent" EntitySet="TeamStudent" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent522" Association="Self.RefStudent522">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="EnterRecord" EntitySet="EnterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent642" Association="Self.RefStudent642">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudent672" Association="Self.RefStudent672">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefStudentBbtRecord1192" Association="Self.RefStudentBbtRecord1192">
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1002" Association="Self.RefTeacher1002">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1012" Association="Self.RefTeacher1012">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1122" Association="Self.RefTeacher1122">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1132" Association="Self.RefTeacher1132">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Document" EntitySet="Document" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher12" Association="Self.RefTeacher12">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeamTeacher" EntitySet="TeamTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1292" Association="Self.RefTeacher1292">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherTag" EntitySet="TeacherTag" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1302" Association="Self.RefTeacher1302">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ClaimRecord" EntitySet="ClaimRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher1332" Association="Self.RefTeacher1332">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="StockIn" EntitySet="StockIn" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher212" Association="Self.RefTeacher212">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher232" Association="Self.RefTeacher232">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher322" Association="Self.RefTeacher322">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="AirRecord" EntitySet="AirRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher352" Association="Self.RefTeacher352">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="StudentBbtRecord" EntitySet="StudentBbtRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher472" Association="Self.RefTeacher472">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="RoomTeacher" EntitySet="RoomTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher512" Association="Self.RefTeacher512">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="EnterRecord" EntitySet="EnterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher542" Association="Self.RefTeacher542">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ClaimRecord" EntitySet="ClaimRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher612" Association="Self.RefTeacher612">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Visitor" EntitySet="Visitor" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher652" Association="Self.RefTeacher652">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="AbsenceRecord" EntitySet="AbsenceRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher662" Association="Self.RefTeacher662">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher822" Association="Self.RefTeacher822">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="ExceptionCaseHistory" EntitySet="ExceptionCaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher832" Association="Self.RefTeacher832">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="DisinfectRecord" EntitySet="DisinfectRecord" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher942" Association="Self.RefTeacher942">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="Mng_UserRole" EntitySet="Mng_UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher952" Association="Self.RefTeacher952">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherRole" EntitySet="TeacherRole" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacher992" Association="Self.RefTeacher992">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherLog" EntitySet="TeacherLog" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeacherBbtRecord1202" Association="Self.RefTeacherBbtRecord1202">
+      <End Role="TeacherBbtRecord" EntitySet="TeacherBbtRecord" />
+      <End Role="ExceptionCase" EntitySet="ExceptionCase" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam1162" Association="Self.RefTeam1162">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamNews" EntitySet="TeamNews" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam1242" Association="Self.RefTeam1242">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamSchedule" EntitySet="TeamSchedule" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam162" Association="Self.RefTeam162">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamClassroom" EntitySet="TeamClassroom" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam22" Association="Self.RefTeam22">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamTeacher" EntitySet="TeamTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam32" Association="Self.RefTeam32">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="RefTeam52" Association="Self.RefTeam52">
+      <End Role="Team" EntitySet="Team" />
+      <End Role="TeamStudent" EntitySet="TeamStudent" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser782" Association="Self.RefWeiXinUser782">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="VerifyCode" EntitySet="VerifyCode" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser792" Association="Self.RefWeiXinUser792">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="Parent" EntitySet="Parent" />
+    </AssociationSet>
+    <AssociationSet Name="RefWeiXinUser812" Association="Self.RefWeiXinUser812">
+      <End Role="WeiXinUser" EntitySet="WeiXinUser" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
